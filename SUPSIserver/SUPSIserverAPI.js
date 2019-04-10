@@ -1,9 +1,8 @@
 const Request = require("request");
 const momentTz = require("moment-timezone") // suport library
 const observedProperties = require("./observedProperties") // get observed Properties for url
-const station = require("./stations")
 
-module.exports.getdata = function getData(callback) {
+module.exports.getdata = function getData(station, callback) {
 
    var startTime = momentTz().tz("Asia/Colombo").subtract(20, "minute").format().toString(); // Generate start time for request
    var endTime = momentTz().tz("Asia/Colombo").format().toString(); // Generate End time for request
@@ -12,7 +11,7 @@ module.exports.getdata = function getData(callback) {
 
    const URL = "http://geoservice.ist.supsi.ch/4onse/wa/istsos/services/lka/operations/getobservation/offerings/temporary" +
       "/procedures/" +
-      station.UniversityOfMoratuwaTCPPCB +
+      station +
       "/observedproperties/" +
       observedProperties.pressure + "," +
       observedProperties.humidity + "," +
@@ -34,13 +33,18 @@ module.exports.getdata = function getData(callback) {
       }
       const result = JSON.parse(body)
       // console.dir(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length-1]);
+      if(!result.data[0].result.DataArray.values.length){
+         callback (true,null);
+      }
       const data = {
          pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],
          humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][3],
          temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],
          windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7]
       }
-      console.log(data);
-      callback(err,data);
+      // console.log(data);
+      callback(err, data);
    });
 }
+
+// :url:callback

@@ -3,7 +3,7 @@ const app = express();
 const bodyparser = require('body-parser');
 
 // Routes files
-const api = require('./routes/Api');
+const displayApi = require('./routes/displayApi');
 
 app.use(bodyparser.urlencoded({extended:false})); 
 app.use(bodyparser.json());
@@ -22,7 +22,7 @@ app.use((req, res, next)=>{
 });
 
 //Set Path
-app.use('/',api);
+app.use('/display',displayApi);
 
 app.use((req, res, next)=>{
     const error = new Error('Not Found');
