@@ -14,7 +14,6 @@ router.get('/uomTCPPCB', function (req, res, next) {
 });
 
 router.get('', function (req, res, next) {
-
     res.json({ success: true, data: "Hello from server" });
 });
 

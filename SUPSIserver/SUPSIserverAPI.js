@@ -8,7 +8,7 @@ module.exports.getdata = function getData(callback) {
    var startTime = momentTz().tz("Asia/Colombo").subtract(20, "minute").format().toString(); // Generate start time for request
    var endTime = momentTz().tz("Asia/Colombo").format().toString(); // Generate End time for request
 
-   console.log(startTime + " to " + endTime);
+   // console.log(startTime + " to " + endTime);
 
    const URL = "http://geoservice.ist.supsi.ch/4onse/wa/istsos/services/lka/operations/getobservation/offerings/temporary" +
       "/procedures/" +
@@ -40,7 +40,7 @@ module.exports.getdata = function getData(callback) {
          temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],
          windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7]
       }
-      console.log(data);
+      // console.log(data);
       callback(err,data);
    });
 }
