@@ -22,8 +22,7 @@ app.use((req, res, next)=>{
 });
 
 //Set Path
-app.use('/data',api);
-
+app.use('/',api);
 
 app.use((req, res, next)=>{
     const error = new Error('Not Found');
