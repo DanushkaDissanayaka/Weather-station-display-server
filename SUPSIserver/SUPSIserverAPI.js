@@ -40,7 +40,7 @@ module.exports.getdata = function getData(callback) {
          temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],
          windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7]
       }
-      // console.log(data);
+      console.log(data);
       callback(err,data);
    });
 }
