@@ -16,6 +16,11 @@ module.exports.getdata = function getData(station, callback) {
       observedProperties.pressure + "," +
       observedProperties.humidity + "," +
       observedProperties.temperature + "," +
+      observedProperties.rainfall + "," +
+      observedProperties.windDirection + "," +
+      observedProperties.solarLight + "," +
+      observedProperties.soilmoisture + "," +
+      observedProperties.temperatureInternal + "," +
       observedProperties.windVelocity +
       "/eventtime/" + startTime + "/" + endTime
 
@@ -32,21 +37,29 @@ module.exports.getdata = function getData(station, callback) {
          return console.dir(err);
       }
       const result = JSON.parse(body)
-      console.dir(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length-1]);
+      console.dir(result.data[0].result.DataArray.values);
 
-      if(!result.data[0].result.DataArray.values.length){
-         callback (true,null);
+      if (!result.data[0].result.DataArray.values.length) {
+         callback(true, null);
+         // console.log("no value to send");
+         
       }
-      else{
-      const data = {
-         pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],
-         humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][3],
-         temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],
-         windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7]
+      else {
+         const data = {
+            time: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0],//
+            temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
+            pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
+            light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
+            humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][9],//
+            temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][11],//
+            windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
+            rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
+            windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
+
+         }
+         // console.log(data);
+         callback(err, data);
       }
-      console.log(data);
-      callback(err, data);
-   }
    });
 }
 

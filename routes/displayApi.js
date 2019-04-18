@@ -10,7 +10,9 @@ router.get('/uomTCPPCB', function (req, res, next) {
         if (err) {
             res.json({ success: false });
         }
-        res.json({ success: true, data: data });
+        else{
+            res.json({ success: true, data: data });
+        }
     });
 });
 
@@ -19,7 +21,9 @@ router.get('/uomFITPCB', function (req, res, next) {
         if (err) {
             res.json({ success: false });
         }
-        res.json({ success: true, data: data });
+        else{
+            res.json({ success: true, data: data });
+        }
     });
 });
 
