@@ -46,7 +46,7 @@ module.exports.getdata = function getData(station, callback) {
 
       }
       else {
-         momentDateTime = moment(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]);
+         momentDateTime = momentTz(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]).tz("Asia/Colombo");
          // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
          const data = {
             time: momentDateTime.format("HH:mm"),
