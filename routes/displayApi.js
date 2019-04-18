@@ -11,7 +11,8 @@ router.get('/uomTCPPCB', function (req, res, next) {
             res.json({ success: false });
         }
         else{
-            res.json({ success: true, data: data });
+            data.success = true;
+            res.json(data);
         }
     });
 });

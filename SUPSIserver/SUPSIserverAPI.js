@@ -1,5 +1,6 @@
 const Request = require("request");
 const momentTz = require("moment-timezone") // suport library
+const moment = require("moment");
 const observedProperties = require("./observedProperties") // get observed Properties for url
 
 module.exports.getdata = function getData(station, callback) {
@@ -42,11 +43,14 @@ module.exports.getdata = function getData(station, callback) {
       if (!result.data[0].result.DataArray.values.length) {
          callback(true, null);
          // console.log("no value to send");
-         
+
       }
       else {
+         momentDateTime = moment(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]);
+         // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
          const data = {
-            time: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0],//
+            time: momentDateTime.format("HH:mm"),
+            date: momentDateTime.format("YYYY-MM-DD"),
             temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
             pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
             light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
@@ -55,7 +59,6 @@ module.exports.getdata = function getData(station, callback) {
             windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
             rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
             windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
-
          }
          // console.log(data);
          callback(err, data);
