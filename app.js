@@ -4,6 +4,7 @@ const bodyparser = require('body-parser');
 
 // Routes files
 const displayApi = require('./routes/displayApi');
+const frontEndApi = require('./routes/frontEndAPI');
 
 app.use(bodyparser.urlencoded({extended:false})); 
 app.use(bodyparser.json());
@@ -23,6 +24,7 @@ app.use((req, res, next)=>{
 
 //Set Path
 app.use('/display',displayApi);
+app.use('/frontEnd',frontEndApi);
 
 app.use((req, res, next)=>{
     const error = new Error('Not Found');
