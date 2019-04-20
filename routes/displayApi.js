@@ -6,11 +6,11 @@ const station = require("../SUPSIserver/stations")
 
 
 router.get('/uomTCPPCB', function (req, res, next) {
-    supsiServer.getdata(station.UniversityOfMoratuwaTCPPCB, (err, data) => {
+    supsiServer.getDisplayData(station.UniversityOfMoratuwaTCPPCB, (err, data) => {
         if (err) {
             res.json({ success: false });
         }
-        else{
+        else {
             data.success = true;
             res.json(data);
         }
@@ -18,12 +18,39 @@ router.get('/uomTCPPCB', function (req, res, next) {
 });
 
 router.get('/uomFITPCB', function (req, res, next) {
-    supsiServer.getdata(station.UniversityOfMoratuwaFITPCB, (err, data) => {
+    supsiServer.getDisplayData(station.UniversityOfMoratuwaFITPCB, (err, data) => {
         if (err) {
             res.json({ success: false });
         }
-        else{
-            res.json({ success: true, data: data });
+        else {
+            data.success = true;
+            res.json(data);
+        }
+    });
+});
+
+router.get('/backmegahawaththaPCB', function (req, res, next) {
+    supsiServer.getDisplayData(station.BAKMEEGAHAWATHTHA, (err, data) => {
+        if (err) {
+            res.json({ success: false });
+        }
+        else {
+            data.success = true;
+            res.json(data);
+        }
+    });
+});
+
+router.post('/dataWithStName', function (req, res, next) {
+    const stationName = req.body.station;
+    
+    supsiServer.getDisplayData(stationName, (err, data) => {
+        if (err) {
+            res.json({ success: false });
+        }
+        else {
+            data.success = true;
+            res.json(data);
         }
     });
 });

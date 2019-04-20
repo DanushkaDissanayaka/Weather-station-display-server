@@ -3,7 +3,7 @@ const momentTz = require("moment-timezone") // suport library
 const moment = require("moment");
 const observedProperties = require("./observedProperties") // get observed Properties for url
 
-module.exports.getdata = function getData(station, callback) {
+module.exports.getDisplayData = function getData(station, callback) {
 
    var startTime = momentTz().tz("Asia/Colombo").subtract(20, "minute").format().toString(); // Generate start time for request
    var endTime = momentTz().tz("Asia/Colombo").format().toString(); // Generate End time for request
@@ -37,31 +37,38 @@ module.exports.getdata = function getData(station, callback) {
       if (err) {
          return console.dir(err);
       }
-      const result = JSON.parse(body)
-      console.dir(result.data[0].result.DataArray.values);
-
-      if (!result.data[0].result.DataArray.values.length) {
-         callback(true, null);
-         // console.log("no value to send");
-
-      }
       else {
-         momentDateTime = momentTz(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]).tz("Asia/Colombo");
-         // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
-         const data = {
-            time: momentDateTime.format("HH:mm"),
-            date: momentDateTime.format("YYYY-MM-DD"),
-            temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
-            pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
-            light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
-            humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][9],//
-            temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][11],//
-            windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
-            rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
-            windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
+
+         const result = JSON.parse(body);
+         if (result.data == undefined) { // check data is available to read
+            console.log("undifined");
+            callback(true, null);
+            return; // stop function doing futher operations
          }
-         // console.log(data);
-         callback(err, data);
+         // console.dir(result.data[0].result.DataArray.values);
+
+         if (!result.data[0].result.DataArray.values.length) {
+            callback(true, null);
+            // console.log("no value to send");
+         }
+         else {
+            momentDateTime = momentTz(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]).tz("Asia/Colombo");
+            // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
+            const data = {
+               time: momentDateTime.format("HH:mm"),
+               date: momentDateTime.format("YYYY-MM-DD"),
+               temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
+               pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
+               light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
+               humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][9],//
+               temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][11],//
+               windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
+               rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
+               windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
+            }
+            // console.log(data);
+            callback(err, data);
+         }
       }
    });
 }
