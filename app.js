@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyparser = require('body-parser');
+const path = require('path');
 
 // Routes files
 const displayApi = require('./routes/displayApi');
@@ -21,7 +22,7 @@ app.use((req, res, next)=>{
     }
     next();
 });
-
+app.use (express.static(path.join(__dirname,'public')));
 //Set Path
 app.use('/display',displayApi);
 app.use('/frontEnd',frontEndApi);
