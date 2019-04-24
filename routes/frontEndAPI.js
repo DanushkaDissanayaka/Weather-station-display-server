@@ -8,7 +8,7 @@ router.post('/dataWithStName', function (req, res, next) {
     
     supsiServer.multipledata(stationName, (err, data) => {
         if (err) {
-            res.json({ success: false });
+            res.json([{ success: false }]);
         }
         else {
             data[0].success = true;
