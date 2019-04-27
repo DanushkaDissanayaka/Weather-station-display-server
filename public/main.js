@@ -435,8 +435,35 @@ var SidebarComponent = /** @class */ (function () {
             { name: "Backmegahawaththa (PCB)", id: "BAKMEEGAHAWATHTHA_PCB" },
             { name: "Bamunugama (MOD)", id: "BAMUNUGAMA_MOD" },
             { name: "Bathalagoda (MOD)", id: "BATHALAGODA_MOD" },
+            { name: "Daduruoya reservoir dam (PCB)", id: "DADURUOYA_RESERVOIR_DAM_PCB" },
+            { name: "Gajanageehama (MOD)", id: "GAJANAGGEGAMA_MOD" },
+            { name: "Gunapala Malalasekara (MOD)", id: "GUNAPALA_MALALASEKARA_MOD" },
+            { name: "Hakwatuna (PCB)", id: "HAKWATUNA_PCB" },
+            { name: "Hettipola (PCB)", id: "HETTIPOLA_PCB" },
+            { name: "Hulugedara (MOD)", id: "HULOGEDARA_MOD" },
+            { name: "John Kothalawala (MOD)", id: "JOHN_KOTHALAWALA_MOD" },
+            { name: "Kadapathwehera (PCB)", id: "KEDAPATHWEHERA_PCB" },
+            { name: "Kimbulanwawa (PCB)", id: "KIMBULANWAWA_PCB" },
+            { name: "Kokawila (MOD)", id: "KOKKAWILA_MOD" },
+            { name: "Kubukgete (MOD)", id: "KUBUKGETE_MOD" },
+            { name: "Lankapura (PCB)", id: "LANKAPURA_PCB" },
+            { name: "Lyceum (MOD)", id: "LYCEUM_MOD" },
+            { name: "Meliya (PCB)", id: "MAELIYA_PCB" },
+            { name: "Malagane (MOD)", id: "MALAGANE_MOD" },
+            { name: "Paragahadeniya (PCB)", id: "PARAGAHADENIYA_PCB" },
+            { name: "Polpithigama (MOD)", id: "POLPITHIGAMA_MOD" },
+            { name: "Porapola (PCB)", id: "PORAPOLA_PCB" },
+            { name: "Rambadagalla (PCB)", id: "RAMBADAGALLA_PCB" },
+            { name: "S.B Herath (MOD)", id: "SB_HERATH_MOD" },
+            { name: "Sri Sudaramaramaya (MOD)", id: "SRI_SUDARSHANARAMAYA_MOD" },
+            //{ name: "TEMPLATE_MOD", id: "TEMPLATE_MOD_OK" },
+            //{ name: "Template_PCB_OK", id: "Template_PCB_OK" },
             { name: "University Of Moratuwa(FIT) PCB", id: "University%20of%20Moratuwa(FIT)PCB" },
             { name: "University Of Moratuwa(TCP) PCB", id: "University%20of%20Moratuwa(TCP)PCB" },
+            { name: "Wlapane (PCB)", id: "WALAPANE_PCB" },
+            { name: "Wellangiriya (PCB)", id: "WELLANGIRIYA_PCB" },
+            { name: "Wewala (PCB)", id: "WEWALA_PCB" },
+            { name: "Withikuliya (MOD)", id: "WITHIKULIYA_MOD" },
         ];
     }
     SidebarComponent.prototype.ngOnInit = function () {
@@ -485,6 +512,21 @@ var Card = /** @class */ (function () {
             this.error = true;
         }
     };
+    Card.prototype.singleValueverifyWithTwoType = function (value, type1Max, type1min, type1UOM, type2Max, type2min, type2Uom) {
+        if (value > type1min && value < type1Max) {
+            this.error = false;
+            this.data = value;
+            this.uom = type1UOM;
+        }
+        else if (value > type2min && value < type2Max) {
+            this.error = false;
+            this.data = value;
+            this.uom = type2Uom;
+        }
+        else {
+            this.error = true;
+        }
+    };
     Card.prototype.multiValueverify = function (value, key) {
         this.error = true;
         for (var i = 0; i < value.length - 1; i++) {
@@ -496,7 +538,7 @@ var Card = /** @class */ (function () {
                 break;
             }
         }
-        this.data = Number(value[value.length - 1][key]).toFixed(2);
+        this.data = Number(value[0][key]).toFixed(2);
     };
     return Card;
 }());
@@ -984,7 +1026,7 @@ var WeatherCardComponent = /** @class */ (function () {
                 var result = data[0];
                 console.log(data);
                 _this.tempretureCard.singleValueverify((Number(result.temperature)).toFixed(2), 50, 10);
-                _this.pressureCard.singleValueverify((Number(result.pressure)).toFixed(2), 110, 90);
+                _this.pressureCard.singleValueverifyWithTwoType((Number(result.pressure)).toFixed(2), 110, 85, "Kpa", 1020, 900, "hpa");
                 _this.humidityCard.singleValueverify((Number(result.humidity)).toFixed(2), 101, 0.01);
                 _this.winSpeedCard.multiValueverify(data, "windVelocity"); // have ti use multi vaue verification
                 _this.windDirectionCard.multiValueverify(data, "windDirection"); // have to use multi value verification

@@ -17,7 +17,7 @@ router.post('/dataWithStName', function (req, res, next) {
     });
 });
 
-router.get('', function (req, res, next) {
+router.post('', function (req, res, next) {
     res.json({ success: true, data: "Hello from server" });
 });
 

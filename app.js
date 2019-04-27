@@ -28,7 +28,7 @@ app.use('/display',displayApi);
 app.use('/frontEnd',frontEndApi);
 
 app.use((req, res, next)=>{
-    const error = new Error('Not Found');
+    const error = new Error('Not Founnd');
     error.status(404);
     next(error);
 });
