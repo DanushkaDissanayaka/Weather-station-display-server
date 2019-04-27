@@ -1251,7 +1251,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var hostAddress = "https://wsdispalyserver.herokuapp.com";
+var hostAddress = "https://wsdispalyserver.herokuapp.com"; //"http://localhost:3000"
 var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
