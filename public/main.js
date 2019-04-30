@@ -1,5 +1,292 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-SG": "./node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "./node_modules/moment/locale/en-SG.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -143,6 +430,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_weather_card_wind_speed_wind_speed_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./component/weather-card/wind-speed/wind-speed.component */ "./src/app/component/weather-card/wind-speed/wind-speed.component.ts");
 /* harmony import */ var _component_weather_card_lastdata_set_lastdata_set_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./component/weather-card/lastdata-set/lastdata-set.component */ "./src/app/component/weather-card/lastdata-set/lastdata-set.component.ts");
 /* harmony import */ var _component_weather_card_cardtemplate_cardtemplate_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./component/weather-card/cardtemplate/cardtemplate.component */ "./src/app/component/weather-card/cardtemplate/cardtemplate.component.ts");
+/* harmony import */ var _component_station_status_station_status_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./component/station-status/station-status.component */ "./src/app/component/station-status/station-status.component.ts");
+/* harmony import */ var _component_station_status_toolbar_template_toolbar_template_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./component/station-status/toolbar-template/toolbar-template.component */ "./src/app/component/station-status/toolbar-template/toolbar-template.component.ts");
+
+
 
 
 
@@ -185,7 +476,9 @@ var AppModule = /** @class */ (function () {
                 _component_weather_card_wind_direction_wind_direction_component__WEBPACK_IMPORTED_MODULE_19__["WindDirectionComponent"],
                 _component_weather_card_wind_speed_wind_speed_component__WEBPACK_IMPORTED_MODULE_20__["WindSpeedComponent"],
                 _component_weather_card_lastdata_set_lastdata_set_component__WEBPACK_IMPORTED_MODULE_21__["LastdataSetComponent"],
-                _component_weather_card_cardtemplate_cardtemplate_component__WEBPACK_IMPORTED_MODULE_22__["CardtemplateComponent"]
+                _component_weather_card_cardtemplate_cardtemplate_component__WEBPACK_IMPORTED_MODULE_22__["CardtemplateComponent"],
+                _component_station_status_station_status_component__WEBPACK_IMPORTED_MODULE_23__["StationStatusComponent"],
+                _component_station_status_toolbar_template_toolbar_template_component__WEBPACK_IMPORTED_MODULE_24__["ToolbarTemplateComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -274,7 +567,7 @@ var LayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url('background2.png');\n  background-size: cover;\n  /* background-image: linear-gradient(to right bottom, rgba(75, 204, 255), rgb(39, 39, 189)); */\n}\n\n.sidenav {\n  width: 300px;\n  border-right: 0;\n  box-shadow: 3px 0 6px rgba(0, 0,0, 0.24);\n  background-color:rgba(255, 255, 255, 1)\n}\n\n/*Toolbar drop shadow*/\n\n.matToolbar{\n  box-shadow: 0px 5px 6px rgba(0, 0,0, 0.24);\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n/* alignment of icons */\n\n.toolbar-spacer {\n  flex: 1 1 auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osd0NBQXdEO0VBQ3hELHNCQUFzQjtFQUN0Qiw4RkFBOEY7QUFDaEc7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZUFBZTtFQUNmLHdDQUF3QztFQUN4QztBQUNGOztBQUVBLHNCQUFzQjs7QUFDdEI7RUFDRSwwQ0FBMEM7QUFDNUM7O0FBRUE7RUFDRSx3QkFBZ0I7RUFBaEIsZ0JBQWdCO0VBQ2hCLE1BQU07RUFDTixVQUFVO0FBQ1o7O0FBRUEsdUJBQXVCOztBQUN2QjtFQUNFLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvbWFpbi1uYXYvbWFpbi1uYXYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlbmF2LWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2JhY2tncm91bmQyLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgLyogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IGJvdHRvbSwgcmdiYSg3NSwgMjA0LCAyNTUpLCByZ2IoMzksIDM5LCAxODkpKTsgKi9cbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMzAwcHg7XG4gIGJvcmRlci1yaWdodDogMDtcbiAgYm94LXNoYWRvdzogM3B4IDAgNnB4IHJnYmEoMCwgMCwwLCAwLjI0KTtcbiAgYmFja2dyb3VuZC1jb2xvcjpyZ2JhKDI1NSwgMjU1LCAyNTUsIDEpXG59XG5cbi8qVG9vbGJhciBkcm9wIHNoYWRvdyovXG4ubWF0VG9vbGJhcntcbiAgYm94LXNoYWRvdzogMHB4IDVweCA2cHggcmdiYSgwLCAwLDAsIDAuMjQpO1xufVxuXG4ubWF0LXRvb2xiYXIubWF0LXByaW1hcnkge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICB0b3A6IDA7XG4gIHotaW5kZXg6IDE7XG59XG5cbi8qIGFsaWdubWVudCBvZiBpY29ucyAqL1xuLnRvb2xiYXItc3BhY2VyIHtcbiAgZmxleDogMSAxIGF1dG87XG59Il19 */"
+module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url('background2.png');\n  background-size: cover;\n  /* background-image: linear-gradient(to right bottom, rgba(75, 204, 255), rgb(39, 39, 189)); */\n}\n\n.sidenav {\n  width: 300px;\n  border-right: 0;\n  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);\n  background-color: rgba(255, 255, 255, 1);\n}\n\n/*Toolbar drop shadow*/\n\n.matToolbar {\n  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.24);\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.toolbar-icon {\n  padding: 0 5px 0 20px;\n}\n\n/* alignment of icons */\n\n.toolbar-spacer {\n  flex: 1 1 auto;\n}\n\n.content {\n  padding: 10px;\n}\n\n.canclick {\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osd0NBQXdEO0VBQ3hELHNCQUFzQjtFQUN0Qiw4RkFBOEY7QUFDaEc7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZUFBZTtFQUNmLHlDQUF5QztFQUN6Qyx3Q0FBd0M7QUFDMUM7O0FBRUEsc0JBQXNCOztBQUN0QjtFQUNFLDJDQUEyQztBQUM3Qzs7QUFFQTtFQUNFLHdCQUFnQjtFQUFoQixnQkFBZ0I7RUFDaEIsTUFBTTtFQUNOLFVBQVU7QUFDWjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQSx1QkFBdUI7O0FBQ3ZCO0VBQ0UsY0FBYztBQUNoQjs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvbWFpbi1uYXYvbWFpbi1uYXYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlbmF2LWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2JhY2tncm91bmQyLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgLyogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IGJvdHRvbSwgcmdiYSg3NSwgMjA0LCAyNTUpLCByZ2IoMzksIDM5LCAxODkpKTsgKi9cbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMzAwcHg7XG4gIGJvcmRlci1yaWdodDogMDtcbiAgYm94LXNoYWRvdzogM3B4IDAgNnB4IHJnYmEoMCwgMCwgMCwgMC4yNCk7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi8qVG9vbGJhciBkcm9wIHNoYWRvdyovXG4ubWF0VG9vbGJhciB7XG4gIGJveC1zaGFkb3c6IDBweCA1cHggNnB4IHJnYmEoMCwgMCwgMCwgMC4yNCk7XG59XG5cbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XG4gIHBvc2l0aW9uOiBzdGlja3k7XG4gIHRvcDogMDtcbiAgei1pbmRleDogMTtcbn1cblxuLnRvb2xiYXItaWNvbiB7XG4gIHBhZGRpbmc6IDAgNXB4IDAgMjBweDtcbn1cblxuLyogYWxpZ25tZW50IG9mIGljb25zICovXG4udG9vbGJhci1zcGFjZXIge1xuICBmbGV4OiAxIDEgYXV0bztcbn1cbi5jb250ZW50IHtcbiAgcGFkZGluZzogMTBweDtcbn1cblxuLmNhbmNsaWNrIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -285,7 +578,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar color=\"primary\">Menu</mat-toolbar>\n    <mat-nav-list>\n      <app-sidebar></app-sidebar>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n      <h6>{{dateTime}}</h6>\n      <!-- <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">favorite</mat-icon>\n      <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example delete icon\">delete</mat-icon> -->\n    </mat-toolbar>\n    <div class=\"content\">\n      <ng-content></ng-content>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar color=\"primary\">Menu</mat-toolbar>\n    <mat-nav-list>\n      <app-sidebar></app-sidebar>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n\n      <mat-icon (click)=\"changePage()\" class=\"toolbar-icon canclick\" aria-hidden=\"false\" aria-label=\"Example delete icon\">format_align_center</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage()\">All Stations</p>\n\n      <mat-icon  class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">access_time</mat-icon>\n      <h6>{{dateTime}}</h6>\n      \n    </mat-toolbar>\n    <div>\n      <div *ngIf=\"!page\">\n        <ng-content></ng-content>\n      </div>\n      <div class=\"content\" *ngIf=\"page\">\n        <app-station-status></app-station-status>\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
 
 /***/ }),
 
@@ -303,14 +596,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+
 
 
 
 
 var MainNavComponent = /** @class */ (function () {
-    function MainNavComponent(breakpointObserver) {
+    function MainNavComponent(breakpointObserver, data) {
         var _this = this;
         this.breakpointObserver = breakpointObserver;
+        this.data = data;
+        this.page = false;
         this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["Breakpoints"].Handset)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result.matches; }));
         setInterval(function () {
@@ -318,13 +615,22 @@ var MainNavComponent = /** @class */ (function () {
             _this.dateTime = currentDate.toLocaleDateString() + " " + currentDate.toLocaleTimeString();
         }, 1000);
     }
+    MainNavComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.data.currentPage.subscribe(function (status) {
+            _this.page = status;
+        });
+    };
+    MainNavComponent.prototype.changePage = function () {
+        this.page = true;
+    };
     MainNavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-main-nav',
             template: __webpack_require__(/*! ./main-nav.component.html */ "./src/app/component/main-nav/main-nav.component.html"),
             styles: [__webpack_require__(/*! ./main-nav.component.css */ "./src/app/component/main-nav/main-nav.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _service_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]])
     ], MainNavComponent);
     return MainNavComponent;
 }());
@@ -430,46 +736,13 @@ __webpack_require__.r(__webpack_exports__);
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent(data) {
         this.data = data;
-        this.stationList = [
-            { name: "4onse UOM (MOD)", id: "4ONSE_UOM_MOD" },
-            { name: "Backmegahawaththa (PCB)", id: "BAKMEEGAHAWATHTHA_PCB" },
-            { name: "Bamunugama (MOD)", id: "BAMUNUGAMA_MOD" },
-            { name: "Bathalagoda (MOD)", id: "BATHALAGODA_MOD" },
-            { name: "Daduruoya reservoir dam (PCB)", id: "DADURUOYA_RESERVOIR_DAM_PCB" },
-            { name: "Gajanageehama (MOD)", id: "GAJANAGGEGAMA_MOD" },
-            { name: "Gunapala Malalasekara (MOD)", id: "GUNAPALA_MALALASEKARA_MOD" },
-            { name: "Hakwatuna (PCB)", id: "HAKWATUNA_PCB" },
-            { name: "Hettipola (PCB)", id: "HETTIPOLA_PCB" },
-            { name: "Hulugedara (MOD)", id: "HULOGEDARA_MOD" },
-            { name: "John Kothalawala (MOD)", id: "JOHN_KOTHALAWALA_MOD" },
-            { name: "Kadapathwehera (PCB)", id: "KEDAPATHWEHERA_PCB" },
-            { name: "Kimbulanwawa (PCB)", id: "KIMBULANWAWA_PCB" },
-            { name: "Kokawila (MOD)", id: "KOKKAWILA_MOD" },
-            { name: "Kubukgete (MOD)", id: "KUBUKGETE_MOD" },
-            { name: "Lankapura (PCB)", id: "LANKAPURA_PCB" },
-            { name: "Lyceum (MOD)", id: "LYCEUM_MOD" },
-            { name: "Meliya (PCB)", id: "MAELIYA_PCB" },
-            { name: "Malagane (MOD)", id: "MALAGANE_MOD" },
-            { name: "Paragahadeniya (PCB)", id: "PARAGAHADENIYA_PCB" },
-            { name: "Polpithigama (MOD)", id: "POLPITHIGAMA_MOD" },
-            { name: "Porapola (PCB)", id: "PORAPOLA_PCB" },
-            { name: "Rambadagalla (PCB)", id: "RAMBADAGALLA_PCB" },
-            { name: "S.B Herath (MOD)", id: "SB_HERATH_MOD" },
-            { name: "Sri Sudaramaramaya (MOD)", id: "SRI_SUDARSHANARAMAYA_MOD" },
-            //{ name: "TEMPLATE_MOD", id: "TEMPLATE_MOD_OK" },
-            //{ name: "Template_PCB_OK", id: "Template_PCB_OK" },
-            { name: "University Of Moratuwa(FIT) PCB", id: "University%20of%20Moratuwa(FIT)PCB" },
-            { name: "University Of Moratuwa(TCP) PCB", id: "University%20of%20Moratuwa(TCP)PCB" },
-            { name: "Wlapane (PCB)", id: "WALAPANE_PCB" },
-            { name: "Wellangiriya (PCB)", id: "WELLANGIRIYA_PCB" },
-            { name: "Wewala (PCB)", id: "WEWALA_PCB" },
-            { name: "Withikuliya (MOD)", id: "WITHIKULIYA_MOD" },
-        ];
+        this.stationList = data.stationList;
     }
     SidebarComponent.prototype.ngOnInit = function () {
     };
     SidebarComponent.prototype.changeStation = function (id, name) {
         this.data.changStation(id, name);
+        this.data.change(false);
     };
     SidebarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -485,6 +758,217 @@ var SidebarComponent = /** @class */ (function () {
 //AMUNUGAMA_WL
 //DADURUOYA_RESERVOIR_DAM_PCB
 //DEEGAMA_WL
+
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/station-status.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/component/station-status/station-status.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngFor=\"let satation of StationList\">\n  <div class=\"separator\">\n    <div class=\"link\">\n        <app-toolbar-template (click)=\"changeStation(satation.id,satation.name)\" id={{satation.id}} name = {{satation.name}}></app-toolbar-template>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/station-status.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/component/station-status/station-status.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".separator {\n  padding: 10px; }\n\n.link {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXRpb24tc3RhdHVzL0c6XFxXZWF0aGVyU3RhdGlvbkZyb250RW5kL3NyY1xcYXBwXFxjb21wb25lbnRcXHN0YXRpb24tc3RhdHVzXFxzdGF0aW9uLXN0YXR1cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxlQUFlLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvc3RhdGlvbi1zdGF0dXMvc3RhdGlvbi1zdGF0dXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VwYXJhdG9yIHtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbn1cclxuXHJcbi5saW5re1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/station-status.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/component/station-status/station-status.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: StationStatusComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StationStatusComponent", function() { return StationStatusComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+
+
+
+var StationStatusComponent = /** @class */ (function () {
+    function StationStatusComponent(dataService) {
+        this.dataService = dataService;
+        this.data = {
+            success: false
+        };
+        this.StationList = dataService.stationList;
+    }
+    StationStatusComponent.prototype.ngOnInit = function () {
+    };
+    StationStatusComponent.prototype.changeStation = function (id, name) {
+        this.dataService.changStation(id, name);
+        this.dataService.change(false);
+    };
+    StationStatusComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-station-status',
+            template: __webpack_require__(/*! ./station-status.component.html */ "./src/app/component/station-status/station-status.component.html"),
+            styles: [__webpack_require__(/*! ./station-status.component.scss */ "./src/app/component/station-status/station-status.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
+    ], StationStatusComponent);
+    return StationStatusComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/toolbar-template/toolbar-template.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/component/station-status/toolbar-template/toolbar-template.component.html ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-toolbar class=\"toolbar\" [ngClass]=\"active?'toolbarActive':'toolbarDeactive'\">\n  <span>{{name}}</span>\n  <mat-progress-spinner *ngIf=\"!ready\" [diameter]=\"30\" mode=\"indeterminate\"></mat-progress-spinner>\n\n  <mat-icon style=\"color:green\" *ngIf=\"active&&ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">check_circle_outline</mat-icon>\n  <p style=\"color:green\" *ngIf=\"active&&ready\"> Active</p>\n\n  <mat-icon style=\"color:red\" *ngIf=\"!active&&ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">highlight_off</mat-icon>\n  <p style=\"color:red\" *ngIf=\"!active&&ready\"> Not Working</p>\n  <span class=\"example-spacer\"></span>\n  <mat-icon *ngIf=\"ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">access_time</mat-icon>\n  <p *ngIf=\"ready\"> {{this.time.lastTime}} {{this.time.lastdate}}</p>\n\n  <mat-icon *ngIf=\"ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">info</mat-icon>\n  <p *ngIf=\"ready\"> Last data log {{this.time.difDate}} Days {{this.time.difHour}} Hours {{this.time.difMin}} Minutes Ago</p>\n</mat-toolbar>"
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/toolbar-template/toolbar-template.component.scss":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/component/station-status/toolbar-template/toolbar-template.component.scss ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".toolbar {\n  background-color: rgba(0, 0, 0, 0.1); }\n\n.toolbarActive {\n  background-color: rgba(0, 128, 0, 0.1); }\n\n.toolbarDeactive {\n  background-color: rgba(255, 0, 0, 0.1); }\n\n.example-icon {\n  padding: 0 14px; }\n\n.example-spacer {\n  flex: 1 1 auto; }\n\n.active {\n  color: green; }\n\n.deactive {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXRpb24tc3RhdHVzL3Rvb2xiYXItdGVtcGxhdGUvRzpcXFdlYXRoZXJTdGF0aW9uRnJvbnRFbmQvc3JjXFxhcHBcXGNvbXBvbmVudFxcc3RhdGlvbi1zdGF0dXNcXHRvb2xiYXItdGVtcGxhdGVcXHRvb2xiYXItdGVtcGxhdGUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQ0FBbUMsRUFBQTs7QUFHckM7RUFDSSxzQ0FBbUMsRUFBQTs7QUFHdkM7RUFDRSxzQ0FBaUMsRUFBQTs7QUFHbkM7RUFDSSxlQUFlLEVBQUE7O0FBR2pCO0VBQ0UsY0FBYyxFQUFBOztBQUdoQjtFQUNFLFlBQVcsRUFBQTs7QUFFYjtFQUNFLFVBQVUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9zdGF0aW9uLXN0YXR1cy90b29sYmFyLXRlbXBsYXRlL3Rvb2xiYXItdGVtcGxhdGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9vbGJhcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvcjpibGFjaywgJGFscGhhOiAwLjEpXHJcbn1cclxuXHJcbi50b29sYmFyQWN0aXZle1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3I6Z3JlZW4sICRhbHBoYTogMC4xKVxyXG59XHJcblxyXG4udG9vbGJhckRlYWN0aXZle1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yOnJlZCwgJGFscGhhOiAwLjEpXHJcbn1cclxuXHJcbi5leGFtcGxlLWljb24ge1xyXG4gICAgcGFkZGluZzogMCAxNHB4O1xyXG4gIH1cclxuICBcclxuICAuZXhhbXBsZS1zcGFjZXIge1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbiAgfVxyXG5cclxuICAuYWN0aXZle1xyXG4gICAgY29sb3I6Z3JlZW47XHJcbiAgfVxyXG4gIC5kZWFjdGl2ZXtcclxuICAgIGNvbG9yOiByZWQ7XHJcbiAgfSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/component/station-status/toolbar-template/toolbar-template.component.ts":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/component/station-status/toolbar-template/toolbar-template.component.ts ***!
+  \*****************************************************************************************/
+/*! exports provided: ToolbarTemplateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolbarTemplateComponent", function() { return ToolbarTemplateComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../service/api.service */ "./src/app/service/api.service.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-timezone/index.js");
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+
+
+var ToolbarTemplateComponent = /** @class */ (function () {
+    function ToolbarTemplateComponent(apiService) {
+        this.apiService = apiService;
+        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
+        this.active = false;
+        this.ready = false;
+        this.time = {
+            lastTime: "",
+            lastdate: "",
+            difMin: 0,
+            difHour: 0,
+            difDate: 0,
+        };
+        this.toolbarModel = {
+            dateTime: "",
+            temperatureInternal: "00.000000",
+            pressure: "0.000000",
+            light: "0.000000",
+            humidity: "0.000000",
+            temperature: "24.730000",
+            windVelocity: "1.090000",
+            rainFall: "0.000000",
+            windDirection: "243.360000",
+            success: false
+        };
+    }
+    ToolbarTemplateComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.getdata();
+        this.refreshData = setInterval(function () {
+            _this.getdata();
+        }, 60000);
+    };
+    ToolbarTemplateComponent.prototype.getdata = function () {
+        var _this = this;
+        this.apiService.getLastDataLog({ station: this.id }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (result) {
+            console.log(result);
+            if (result.success) {
+                _this.toolbarModel = result;
+                _this.evaluate(result.dateTime);
+                _this.ready = true;
+            }
+        });
+    };
+    ToolbarTemplateComponent.prototype.convert = function (value) {
+        return Number(value).toFixed(2);
+    };
+    ToolbarTemplateComponent.prototype.evaluate = function (endDate) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var now, end, duration;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                now = moment_timezone__WEBPACK_IMPORTED_MODULE_4__().tz("Asia/Colombo");
+                end = moment_timezone__WEBPACK_IMPORTED_MODULE_4__(endDate).tz("Asia/Colombo");
+                duration = moment__WEBPACK_IMPORTED_MODULE_3__["duration"](now.diff(end));
+                // console.log(duration.asMinutes().toFixed(1));
+                this.time.lastTime = end.format("HH:mm");
+                this.time.lastdate = end.format("DD/MM/YYYY");
+                this.time.difDate = duration.days();
+                this.time.difHour = duration.hours();
+                this.time.difMin = duration.minutes();
+                // console.log(this.time);
+                if (Number(duration.asMinutes().toFixed(1)) < 20) {
+                    this.active = true;
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    ToolbarTemplateComponent.prototype.ngOnDestroy = function () {
+        clearInterval(this.refreshData);
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('id'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], ToolbarTemplateComponent.prototype, "id", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('name'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], ToolbarTemplateComponent.prototype, "name", void 0);
+    ToolbarTemplateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-toolbar-template',
+            template: __webpack_require__(/*! ./toolbar-template.component.html */ "./src/app/component/station-status/toolbar-template/toolbar-template.component.html"),
+            styles: [__webpack_require__(/*! ./toolbar-template.component.scss */ "./src/app/component/station-status/toolbar-template/toolbar-template.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]])
+    ], ToolbarTemplateComponent);
+    return ToolbarTemplateComponent;
+}());
+
 
 
 /***/ }),
@@ -672,7 +1156,7 @@ var HumidityComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table mat-table [dataSource]=\"tableData\" class=\"mat-elevation-z8\">\n  <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n  <!-- Temperature Column -->\n  <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n  <!-- Temperature Column -->\n  <ng-container matColumnDef=\"temperature\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Temperature (&deg;C)</th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.temperature}} </td>\n  </ng-container>\n\n  <!-- Pressure Column -->\n  <ng-container matColumnDef=\"pressure\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.pressure}} </td>\n  </ng-container>\n\n  <!-- Humidity Column -->\n  <ng-container matColumnDef=\"humidity\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.humidity}} </td>\n  </ng-container>\n\n  <!-- Rainfall Column -->\n  <ng-container matColumnDef=\"Rainfall\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.rainFall}} </td>\n  </ng-container>\n\n  <!-- Rainfall Column -->\n  <ng-container matColumnDef=\"Wind Speed\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.windVelocity}} </td>\n  </ng-container>\n\n  <!-- Rainfall Column -->\n  <ng-container matColumnDef=\"Wind Direction\">\n    <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.windDirection}} </td>\n  </ng-container>\n\n  <!-- Rainfall Column -->\n  <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.light}} </td>\n    </ng-container>\n\n      <!-- Rainfall Column -->\n  <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.temperatureInternal}} </td>\n    </ng-container>\n\n\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>"
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"tableData\" >\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"temperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Temperature (&deg;C)</th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.temperature}} </td>\n    </ng-container>\n\n    <!-- Pressure Column -->\n    <ng-container matColumnDef=\"pressure\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.pressure}} </td>\n    </ng-container>\n\n    <!-- Humidity Column -->\n    <ng-container matColumnDef=\"humidity\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.humidity}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Rainfall\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.rainFall}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Speed\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.windVelocity}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Direction\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.windDirection}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.light}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.temperatureInternal}} </td>\n    </ng-container>\n\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>"
 
 /***/ }),
 
@@ -683,7 +1167,7 @@ module.exports = "<table mat-table [dataSource]=\"tableData\" class=\"mat-elevat
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.032); }\n\n.hedder {\n  color: white;\n  font-size: 16px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3dlYXRoZXItY2FyZC9sYXN0ZGF0YS1zZXQvRzpcXFdlYXRoZXJTdGF0aW9uRnJvbnRFbmQvc3JjXFxhcHBcXGNvbXBvbmVudFxcd2VhdGhlci1jYXJkXFxsYXN0ZGF0YS1zZXRcXGxhc3RkYXRhLXNldC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxzQ0FBbUMsRUFBQTs7QUFHckM7RUFDRSxZQUFXO0VBQ1gsZUFBZSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L3dlYXRoZXItY2FyZC9sYXN0ZGF0YS1zZXQvbGFzdGRhdGEtc2V0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yOiAjMDAwLCAkYWxwaGE6IDAuMDMyKTtcclxufVxyXG5cclxuLmhlZGRlcntcclxuICBjb2xvcjp3aGl0ZTtcclxuICBmb250LXNpemU6IDE2cHg7XHJcbn1cclxuIl19 */"
+module.exports = "table {\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.032); }\n\n.example-container {\n  overflow: auto; }\n\n.hedder {\n  color: white;\n  font-size: 16px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3dlYXRoZXItY2FyZC9sYXN0ZGF0YS1zZXQvRzpcXFdlYXRoZXJTdGF0aW9uRnJvbnRFbmQvc3JjXFxhcHBcXGNvbXBvbmVudFxcd2VhdGhlci1jYXJkXFxsYXN0ZGF0YS1zZXRcXGxhc3RkYXRhLXNldC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7RUFDWCxzQ0FBbUMsRUFBQTs7QUFHckM7RUFDRSxjQUFjLEVBQUE7O0FBR2hCO0VBQ0UsWUFBVztFQUNYLGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC93ZWF0aGVyLWNhcmQvbGFzdGRhdGEtc2V0L2xhc3RkYXRhLXNldC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvcjogIzAwMCwgJGFscGhhOiAwLjAzMik7XHJcbn1cclxuXHJcbi5leGFtcGxlLWNvbnRhaW5lciB7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuXHJcbi5oZWRkZXJ7XHJcbiAgY29sb3I6d2hpdGU7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -942,7 +1426,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _cardtemplate_card_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cardtemplate/card.model */ "./src/app/component/weather-card/cardtemplate/card.model.ts");
 /* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../service/api.service */ "./src/app/service/api.service.ts");
-/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+
+
 
 
 
@@ -952,6 +1440,7 @@ var WeatherCardComponent = /** @class */ (function () {
     function WeatherCardComponent(apiService, data) {
         this.apiService = apiService;
         this.data = data;
+        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
         this.cards = [];
         this.stationName = "University%20of%20Moratuwa(TCP)PCB";
         this.stationDispayName = "University Of Moratuwa(FIT) PCB";
@@ -1011,15 +1500,20 @@ var WeatherCardComponent = /** @class */ (function () {
             _this.getdata(true);
         });
         this.getdata(true);
-        setInterval(function () {
+        this.refreshStation = setInterval(function () {
             _this.getdata(false);
-        }, 10000);
+        }, 30000);
+    };
+    WeatherCardComponent.prototype.ngOnDestroy = function () {
+        clearInterval(this.refreshStation);
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
     };
     WeatherCardComponent.prototype.getdata = function (isFirstload) {
         var _this = this;
         if (isFirstload)
             this.loadingFlag = true;
-        this.apiService.getThisTimeData({ station: this.stationName }).subscribe(function (data) {
+        this.apiService.getThisTimeData({ station: this.stationName }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (data) {
             if (data[0].success) {
                 _this.workingFlag = true;
                 _this.tableData = data;
@@ -1052,7 +1546,7 @@ var WeatherCardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./weather-card.component.html */ "./src/app/component/weather-card/weather-card.component.html"),
             styles: [__webpack_require__(/*! ./weather-card.component.scss */ "./src/app/component/weather-card/weather-card.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"], _service_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"], _service_data_service__WEBPACK_IMPORTED_MODULE_6__["DataService"]])
     ], WeatherCardComponent);
     return WeatherCardComponent;
 }());
@@ -1251,7 +1745,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var hostAddress = "https://wsdispalyserver.herokuapp.com"; //"http://localhost:3000"
+var hostAddress = "https://wsdispalyserver.herokuapp.com"; //"http://localhost:3000"//
 var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
@@ -1260,6 +1754,12 @@ var ApiService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_2__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post(hostAddress + '/frontEnd/dataWithStName', data, { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
+    };
+    ApiService.prototype.getLastDataLog = function (data) {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_2__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(hostAddress + '/frontEnd/lastDataLog', data, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
     };
     ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1293,15 +1793,55 @@ __webpack_require__.r(__webpack_exports__);
 
 var DataService = /** @class */ (function () {
     function DataService() {
+        this.stationList = [
+            { name: "4onse UOM (MOD)", id: "4ONSE_UOM_MOD" },
+            { name: "Backmegahawaththa (PCB)", id: "BAKMEEGAHAWATHTHA_PCB" },
+            { name: "Bamunugama (MOD)", id: "BAMUNUGAMA_MOD" },
+            { name: "Bathalagoda (MOD)", id: "BATHALAGODA_MOD" },
+            { name: "Daduruoya reservoir dam (PCB)", id: "DADURUOYA_RESERVOIR_DAM_PCB" },
+            { name: "Gajanageehama (MOD)", id: "GAJANAGGEGAMA_MOD" },
+            { name: "Gunapala Malalasekara (MOD)", id: "GUNAPALA_MALALASEKARA_MOD" },
+            { name: "Hakwatuna (PCB)", id: "HAKWATUNA_PCB" },
+            { name: "Hettipola (PCB)", id: "HETTIPOLA_PCB" },
+            { name: "Hulugedara (MOD)", id: "HULOGEDARA_MOD" },
+            { name: "John Kothalawala (MOD)", id: "JOHN_KOTHALAWALA_MOD" },
+            { name: "Kadapathwehera (PCB)", id: "KEDAPATHWEHERA_PCB" },
+            { name: "Kimbulanwawa (PCB)", id: "KIMBULANWAWA_PCB" },
+            { name: "Kokawila (MOD)", id: "KOKKAWILA_MOD" },
+            { name: "Kubukgete (MOD)", id: "KUBUKGETE_MOD" },
+            { name: "Lankapura (PCB)", id: "LANKAPURA_PCB" },
+            { name: "Lyceum (MOD)", id: "LYCEUM_MOD" },
+            { name: "Meliya (PCB)", id: "MAELIYA_PCB" },
+            { name: "Malagane (MOD)", id: "MALAGANE_MOD" },
+            { name: "Paragahadeniya (PCB)", id: "PARAGAHADENIYA_PCB" },
+            { name: "Polpithigama (MOD)", id: "POLPITHIGAMA_MOD" },
+            { name: "Porapola (PCB)", id: "PORAPOLA_PCB" },
+            { name: "Rambadagalla (PCB)", id: "RAMBADAGALLA_PCB" },
+            { name: "S.B Herath (MOD)", id: "SB_HERATH_MOD" },
+            { name: "Sri Sudaramaramaya (MOD)", id: "SRI_SUDARSHANARAMAYA_MOD" },
+            //{ name: "TEMPLATE_MOD", id: "TEMPLATE_MOD_OK" },
+            //{ name: "Template_PCB_OK", id: "Template_PCB_OK" },
+            { name: "University Of Moratuwa(FIT) PCB", id: "University%20of%20Moratuwa(FIT)PCB" },
+            { name: "University Of Moratuwa(TCP) PCB", id: "University%20of%20Moratuwa(TCP)PCB" },
+            { name: "Wlapane (PCB)", id: "WALAPANE_PCB" },
+            { name: "Wellangiriya (PCB)", id: "WELLANGIRIYA_PCB" },
+            { name: "Wewala (PCB)", id: "WEWALA_PCB" },
+            { name: "Withikuliya (MOD)", id: "WITHIKULIYA_MOD" },
+        ];
         this.station = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('University%20of%20Moratuwa(FIT)PCB');
         this.currentStation = this.station.asObservable();
         this.stationName = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]("University Of Moratuwa(FIT) PCB");
         this.currentStationName = this.stationName.asObservable();
+        this.changePage = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
+        this.currentPage = this.changePage.asObservable();
     }
     DataService.prototype.changStation = function (station, stationName) {
         console.log(station);
         this.station.next(station);
         this.stationName.next(stationName);
+    };
+    DataService.prototype.change = function (status) {
+        this.changePage.next(status);
     };
     DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
