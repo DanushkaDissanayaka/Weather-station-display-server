@@ -9,5 +9,5 @@ module.exports= {
     windDirection       : "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:direction",
     windVelocity        : "urn:ogc:def:parameter:x-istsos:1.0:meteo:air:wind:velocity",
     waterheight         :  "urn:ogc:def:parameter:x-istsos:1.0:river:water:height",
-    waterdischarge         :  "urn:ogc:def:parameter:x-istsos:1.0:river:water:discharge"
+    waterdischarge      :  "urn:ogc:def:parameter:x-istsos:1.0:river:water:discharge"
 }

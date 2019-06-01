@@ -1,7 +1,9 @@
 
 const express = require('express');
 const router = express.Router();
-const supsiServer = require('../SUPSIserver/SUPSIserverAPI')
+const supsiServer = require('../SUPSIserver/SUPSIserverAPI');
+
+const Station = require('../models/station');
 
 router.post('/dataWithStName', function (req, res, next) {
     const stationName = req.body.station;
@@ -46,6 +48,30 @@ router.post('/lastDataLog', function (req, res, next) {
             res.json(data);
         }
     });
+});
+
+router.post('/addnewStation', function (req, res, next) {
+
+    let newStation = new Station({
+        name: req.body.name,
+        id: req.body.id,
+        type: req.body.type
+    });
+    newStation.save()
+        .then(result => {
+            console.log(result)
+            res.status(200).json({
+                state: true,
+                mag :"Station save successfully"
+            })
+        })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json({
+                state: false,
+                msg:err.errmsg
+            })
+        })
 });
 
 router.post('', function (req, res, next) {

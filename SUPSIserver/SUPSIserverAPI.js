@@ -147,6 +147,19 @@ module.exports.multipledata = function getData(station, callback) {
    });
 }
 
+/**
+ * get last data set of a station
+ * changeing the substractiong time in hours you can get t hours data set
+ * @code var startTime = momentTz().tz("Asia/Colombo").subtract(2, "h").format().toString();
+ * change 2 to 3 and you can get last 3 hours data set if it is available at the server.
+ * @param station name of the staton procedure name of station
+ * @param type type of station weater station or river for weather station type shyld be 1
+ * and for the river station there is two type:
+ *    type 1 type id 2  this type of stations have observerd property of water hight as urn:ogc:def:parameter:x-istsos:1.0:river:water:height
+ *    type 2 type id 3  this type of station have observerd property of water hight as urn:ogc:def:parameter:x-istsos:1.0:river:water:discharge
+ * @param   callback call back function after exicution of function
+ */
+
 module.exports.multipledataWL = function getData(station, type, callback) {
 
    var startTime = momentTz().tz("Asia/Colombo").subtract(2, "h").format().toString(); // Generate start time for request
@@ -223,7 +236,18 @@ module.exports.multipledataWL = function getData(station, type, callback) {
    });
 }
 
-
+/**
+ * find last dala log
+ * of a paticuler
+ * station
+ * @param time current time
+ * @param station name of the staton procedure name of station
+ * @param type type of station weater station or river for weather station type shyld be 1
+ * and for the river station there is two type:
+ *    type 1 type id 2  this type of stations have observerd property of water hight as urn:ogc:def:parameter:x-istsos:1.0:river:water:height
+ *    type 2 type id 3  this type of station have observerd property of water hight as urn:ogc:def:parameter:x-istsos:1.0:river:water:discharge
+ * @param   callback call back function after exicution of function
+ */
 module.exports.findLastDataLog = function getData(time, station, type, callback) {
    var startTime = momentTz().tz("Asia/Colombo").subtract(time, "d").format().toString(); // Generate start time for request
    var endTime = momentTz().tz("Asia/Colombo").format().toString(); // Generate End time for request
