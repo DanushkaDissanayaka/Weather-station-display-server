@@ -4,61 +4,61 @@ const bodyparser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const config = require('./config/config');
-
+const update = require('./models/updateStations')
 /**
  * set older vertion settings
  */
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
-mongoose.connect(config.database, {useNewUrlParser: true},(err) =>{
-    if (err){
+mongoose.connect(config.database, { useNewUrlParser: true }, (err) => {
+    if (err) {
         throw err;
     }
-    else{
+    else {
         console.log("connected to database");
+        update.update(); // this function can find at models/updateStation
     }
-});
+})
 
 mongoose.Promise = global.Promise;
-
 // Routes files
 const displayApi = require('./routes/displayApi');
 const frontEndApi = require('./routes/frontEndAPI');
 
-app.use(bodyparser.urlencoded({extended:false})); 
+app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
-app.use((req, res, next)=>{
-    res.header("Access-Control-Allow-Origin","*");
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept, Authorization"
     );
-    if(req.method === 'OPTIONS'){ 
-        res.header('Access-Control-Allow-Methods','PUT, POST, PATCH, DELETE')
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE')
         return res.status(200).json({});
     }
     next();
 });
-app.use (express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 //Set Path
-app.use('/display',displayApi);
-app.use('/frontEnd',frontEndApi);
+app.use('/display', displayApi);
+app.use('/frontEnd', frontEndApi);
 
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
     const error = new Error('Not Founnd');
     error.status(404);
     next(error);
 });
 
-app.use((error, req, res, next)=>{  
+app.use((error, req, res, next) => {
     res.status(error.status || 500);
-    res.json({ 
+    res.json({
         error: {
             message: error.message
         }
     });
-}); 
+});
 
 module.exports = app;

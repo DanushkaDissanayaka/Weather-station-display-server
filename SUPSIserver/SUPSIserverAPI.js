@@ -295,37 +295,42 @@ module.exports.findLastDataLog = function getData(time, station, type, callback)
       }
       else {
 
-         const result = JSON.parse(body);
-         if (result.data == undefined || result.data.length == 0) { // check data is available to read
-            console.log("undifined");
-            callback(true, null);
-            return; // stop function doing futher operations
-         }
-         // console.dir(result.data[0].result.DataArray.values);
-
-         if (!result.data[0].result.DataArray.values.length) {
-            getData(time + 1, station, type, callback);
-            //callback(true, null);
-            // console.log("no value to send");
-         }
-         else {
-            // momentDateTime = momentTz(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]).tz("Asia/Colombo");
-            // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
-            const data = {
-               //time: momentDateTime.format("HH:mm"),
-               //date: momentDateTime.format("YYYY-MM-DD"),
-               dateTime: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0],
-               // temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
-               // pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
-               // light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
-               // humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][9],//
-               // temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][11],//
-               // windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
-               // rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
-               // windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
+         try {
+            const result = JSON.parse(body);
+            if (result.data == undefined || result.data.length == 0) { // check data is available to read
+               console.log("undifined");
+               callback(true, null);
+               return; // stop function doing futher operations
             }
-            // console.log(data);
-            callback(err, data);
+            // console.dir(result.data[0].result.DataArray.values);
+
+            if (!result.data[0].result.DataArray.values.length) {
+               getData(time + 1, station, type, callback);
+               //callback(true, null);
+               // console.log("no value to send");
+            }
+            else {
+               // momentDateTime = momentTz(result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0]).tz("Asia/Colombo");
+               // console.log(momentDateTime.format("YYYY-MM-DD HH:mm"));
+               const data = {
+                  //time: momentDateTime.format("HH:mm"),
+                  //date: momentDateTime.format("YYYY-MM-DD"),
+                  dateTime: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][0],
+                  // temperatureInternal: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][1],//
+                  // pressure: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][7],//
+                  // light: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][5],//
+                  // humidity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][9],//
+                  // temperature: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][11],//
+                  // windVelocity: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][17],//
+                  // rainFall: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][13],//**** */
+                  // windDirection: result.data[0].result.DataArray.values[result.data[0].result.DataArray.values.length - 1][15],//
+               }
+               // console.log(data);
+               callback(err, data);
+            }
+         } catch (error) {
+            console.log(error);
+            callback(true, null);
          }
       }
    });

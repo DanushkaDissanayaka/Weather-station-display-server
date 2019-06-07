@@ -4,7 +4,7 @@ const station = mongoose.Schema({
     id: { type: String, unique: true },
     name: { type: String },
     type: { type: Number },
-    ldlog: { type: String }
+    ldlog: { type: String , default: null }
 })
 
 module.exports = mongoose.model('Station', station);

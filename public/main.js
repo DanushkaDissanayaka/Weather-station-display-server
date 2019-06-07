@@ -435,6 +435,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_all_stations_all_stations_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./component/all-stations/all-stations.component */ "./src/app/component/all-stations/all-stations.component.ts");
 /* harmony import */ var _component_all_stations_row_row_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./component/all-stations/row/row.component */ "./src/app/component/all-stations/row/row.component.ts");
 /* harmony import */ var _component_weather_card_water_level_last_data_water_level_last_data_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./component/weather-card/water-level-last-data/water-level-last-data.component */ "./src/app/component/weather-card/water-level-last-data/water-level-last-data.component.ts");
+/* harmony import */ var _component_summary_summary_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./component/summary/summary.component */ "./src/app/component/summary/summary.component.ts");
+
 
 
 
@@ -488,6 +490,7 @@ var AppModule = /** @class */ (function () {
                 _component_all_stations_all_stations_component__WEBPACK_IMPORTED_MODULE_25__["AllStationsComponent"],
                 _component_all_stations_row_row_component__WEBPACK_IMPORTED_MODULE_26__["RowComponent"],
                 _component_weather_card_water_level_last_data_water_level_last_data_component__WEBPACK_IMPORTED_MODULE_27__["WaterLevelLastDataComponent"],
+                _component_summary_summary_component__WEBPACK_IMPORTED_MODULE_28__["SummaryComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -531,7 +534,7 @@ module.exports = "<div class=\"tableContainer\">\n  <!-- <table id=\"station\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#station {\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n  font-size: 16px;\n  border-collapse: collapse;\n  width: 100%; }\n\n#station td, #station th {\n  border: 0px solid #ddd;\n  padding: 8px; }\n\n#station tr:nth-child(even) {\n  background-color: rgba(0, 0, 0, 0.032); }\n\n#station tr:hover {\n  background-color: rgba(255, 255, 255, 0.2); }\n\n#station th {\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  background-color: rgba(0, 0, 0, 0.2);\n  color: white; }\n\n.headder {\n  text-align: left;\n  background-color: rgba(0, 0, 0, 0.2);\n  color: white; }\n\n.link {\n  cursor: pointer; }\n\n.text-inside-grid {\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n  position: absolute;\n  font-size: 18px;\n  left: 5px;\n  padding-top: 12px;\n  padding-bottom: 12px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FsbC1zdGF0aW9ucy9HOlxcV2VhdGhlclN0YXRpb25Gcm9udEVuZC9zcmNcXGFwcFxcY29tcG9uZW50XFxhbGwtc3RhdGlvbnNcXGFsbC1zdGF0aW9ucy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLHlEQUF5RDtFQUN6RCxlQUFlO0VBQ2YseUJBQXlCO0VBQ3pCLFdBQVcsRUFBQTs7QUFHYjtFQUNFLHNCQUFzQjtFQUN0QixZQUFZLEVBQUE7O0FBR2Q7RUFBNEIsc0NBQXFDLEVBQUE7O0FBRWpFO0VBQW1CLDBDQUFtQyxFQUFBOztBQUV0RDtFQUNFLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZ0JBQWdCO0VBQ2hCLG9DQUFvQztFQUNwQyxZQUFZLEVBQUE7O0FBRWQ7RUFDRSxnQkFBZ0I7RUFDaEIsb0NBQW9DO0VBQ3BDLFlBQVksRUFBQTs7QUFHZDtFQUNFLGVBQWUsRUFBQTs7QUFHakI7RUFDRSx5REFBeUQ7RUFDekQsa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixTQUFTO0VBQ1QsaUJBQWlCO0VBQ2pCLG9CQUFvQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2FsbC1zdGF0aW9ucy9hbGwtc3RhdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGFibGVDb250YWluZXJ7XHJcbiAgLy8gcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuI3N0YXRpb24ge1xyXG4gIGZvbnQtZmFtaWx5OiBcIlRyZWJ1Y2hldCBNU1wiLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xyXG4gIGZvbnQtc2l6ZTogMTZweDtcclxuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4jc3RhdGlvbiB0ZCwgI3N0YXRpb24gdGgge1xyXG4gIGJvcmRlcjogMHB4IHNvbGlkICNkZGQ7XHJcbiAgcGFkZGluZzogOHB4O1xyXG59XHJcblxyXG4jc3RhdGlvbiB0cjpudGgtY2hpbGQoZXZlbil7YmFja2dyb3VuZC1jb2xvcjpyZ2JhKCRjb2xvcjogIzAwMDAwMCwgJGFscGhhOiAwLjAzMik7fVxyXG5cclxuI3N0YXRpb24gdHI6aG92ZXIge2JhY2tncm91bmQtY29sb3I6cmdiYSgkY29sb3I6IHdoaXRlLCAkYWxwaGE6IDAuMik7fVxyXG5cclxuI3N0YXRpb24gdGgge1xyXG4gIHBhZGRpbmctdG9wOiAxMnB4O1xyXG4gIHBhZGRpbmctYm90dG9tOiAxMnB4O1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3I6IGJsYWNrLCAkYWxwaGE6IDAuMik7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcbi5oZWFkZGVye1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3I6IGJsYWNrLCAkYWxwaGE6IDAuMik7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4ubGlua3tcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi50ZXh0LWluc2lkZS1ncmlkIHtcclxuICBmb250LWZhbWlseTogXCJUcmVidWNoZXQgTVNcIiwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgZm9udC1zaXplOiAxOHB4O1xyXG4gIGxlZnQ6IDVweDtcclxuICBwYWRkaW5nLXRvcDogMTJweDtcclxuICBwYWRkaW5nLWJvdHRvbTogMTJweDtcclxufSJdfQ== */"
+module.exports = "#station {\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n  font-size: 16px;\n  border-collapse: collapse;\n  width: 100%; }\n\n#station td,\n#station th {\n  border: 0px solid #ddd;\n  padding: 8px; }\n\n#station tr:nth-child(even) {\n  background-color: rgba(0, 0, 0, 0.032); }\n\n#station tr:hover {\n  background-color: rgba(255, 255, 255, 0.2); }\n\n#station th {\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  background-color: rgba(0, 0, 0, 0.2);\n  color: white; }\n\n.headder {\n  text-align: left;\n  background-color: rgba(0, 0, 0, 0.2);\n  color: white; }\n\n.link {\n  cursor: pointer; }\n\n.text-inside-grid {\n  font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif;\n  position: absolute;\n  font-size: 18px;\n  left: 5px;\n  padding-top: 12px;\n  padding-bottom: 12px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FsbC1zdGF0aW9ucy9HOlxcV2VhdGhlclN0YXRpb25Gcm9udEVuZC9zcmNcXGFwcFxcY29tcG9uZW50XFxhbGwtc3RhdGlvbnNcXGFsbC1zdGF0aW9ucy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFJQTtFQUNFLHlEQUF5RDtFQUN6RCxlQUFlO0VBQ2YseUJBQXlCO0VBQ3pCLFdBQVcsRUFBQTs7QUFHYjs7RUFFRSxzQkFBc0I7RUFDdEIsWUFBWSxFQUFBOztBQUdkO0VBQ0Usc0NBQXNDLEVBQUE7O0FBR3hDO0VBQ0UsMENBQW9DLEVBQUE7O0FBR3RDO0VBQ0UsaUJBQWlCO0VBQ2pCLG9CQUFvQjtFQUNwQixnQkFBZ0I7RUFDaEIsb0NBQW9DO0VBQ3BDLFlBQVksRUFBQTs7QUFFZDtFQUNFLGdCQUFnQjtFQUNoQixvQ0FBb0M7RUFDcEMsWUFBWSxFQUFBOztBQUdkO0VBQ0UsZUFBZSxFQUFBOztBQUdqQjtFQUNFLHlEQUF5RDtFQUN6RCxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFNBQVM7RUFDVCxpQkFBaUI7RUFDakIsb0JBQW9CLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvYWxsLXN0YXRpb25zL2FsbC1zdGF0aW9ucy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZUNvbnRhaW5lciB7XHJcbiAgLy8gcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuI3N0YXRpb24ge1xyXG4gIGZvbnQtZmFtaWx5OiBcIlRyZWJ1Y2hldCBNU1wiLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xyXG4gIGZvbnQtc2l6ZTogMTZweDtcclxuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4jc3RhdGlvbiB0ZCxcclxuI3N0YXRpb24gdGgge1xyXG4gIGJvcmRlcjogMHB4IHNvbGlkICNkZGQ7XHJcbiAgcGFkZGluZzogOHB4O1xyXG59XHJcblxyXG4jc3RhdGlvbiB0cjpudGgtY2hpbGQoZXZlbikge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yOiAjMDAwMDAwLCAkYWxwaGE6IDAuMDMyKTtcclxufVxyXG5cclxuI3N0YXRpb24gdHI6aG92ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yOiB3aGl0ZSwgJGFscGhhOiAwLjIpO1xyXG59XHJcblxyXG4jc3RhdGlvbiB0aCB7XHJcbiAgcGFkZGluZy10b3A6IDEycHg7XHJcbiAgcGFkZGluZy1ib3R0b206IDEycHg7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvcjogYmxhY2ssICRhbHBoYTogMC4yKTtcclxuICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmhlYWRkZXIge1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3I6IGJsYWNrLCAkYWxwaGE6IDAuMik7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4ubGluayB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4udGV4dC1pbnNpZGUtZ3JpZCB7XHJcbiAgZm9udC1mYW1pbHk6IFwiVHJlYnVjaGV0IE1TXCIsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGZvbnQtc2l6ZTogMThweDtcclxuICBsZWZ0OiA1cHg7XHJcbiAgcGFkZGluZy10b3A6IDEycHg7XHJcbiAgcGFkZGluZy1ib3R0b206IDEycHg7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -852,7 +855,7 @@ var LayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url('background2.png');\n  background-size: cover;\n  /* background-image: linear-gradient(to right bottom, rgba(75, 204, 255), rgb(39, 39, 189)); */\n}\n\n.sidenav {\n  width: 300px;\n  border-right: 0;\n  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);\n  background-color: rgba(255, 255, 255, 1);\n}\n\n/*Toolbar drop shadow*/\n\n.matToolbar {\n  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.24);\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.toolbar-icon {\n  padding: 0 5px 0 20px;\n}\n\n/* alignment of icons */\n\n.toolbar-spacer {\n  flex: 1 1 auto;\n}\n\n.content {\n  padding: 10px;\n}\n\n.canclick {\n  cursor: pointer;\n}\n\n.no-v-scroll {\n  height: 100%;\n  overflow-y: hidden; \n  display: flex; \n  flex-direction: column;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osd0NBQXdEO0VBQ3hELHNCQUFzQjtFQUN0Qiw4RkFBOEY7QUFDaEc7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZUFBZTtFQUNmLHlDQUF5QztFQUN6Qyx3Q0FBd0M7QUFDMUM7O0FBRUEsc0JBQXNCOztBQUN0QjtFQUNFLDJDQUEyQztBQUM3Qzs7QUFFQTtFQUNFLHdCQUFnQjtFQUFoQixnQkFBZ0I7RUFDaEIsTUFBTTtFQUNOLFVBQVU7QUFDWjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQSx1QkFBdUI7O0FBQ3ZCO0VBQ0UsY0FBYztBQUNoQjs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBQ0E7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixzQkFBc0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvbWFpbi1uYXYvbWFpbi1uYXYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlbmF2LWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2JhY2tncm91bmQyLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgLyogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IGJvdHRvbSwgcmdiYSg3NSwgMjA0LCAyNTUpLCByZ2IoMzksIDM5LCAxODkpKTsgKi9cbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMzAwcHg7XG4gIGJvcmRlci1yaWdodDogMDtcbiAgYm94LXNoYWRvdzogM3B4IDAgNnB4IHJnYmEoMCwgMCwgMCwgMC4yNCk7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMSk7XG59XG5cbi8qVG9vbGJhciBkcm9wIHNoYWRvdyovXG4ubWF0VG9vbGJhciB7XG4gIGJveC1zaGFkb3c6IDBweCA1cHggNnB4IHJnYmEoMCwgMCwgMCwgMC4yNCk7XG59XG5cbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XG4gIHBvc2l0aW9uOiBzdGlja3k7XG4gIHRvcDogMDtcbiAgei1pbmRleDogMTtcbn1cblxuLnRvb2xiYXItaWNvbiB7XG4gIHBhZGRpbmc6IDAgNXB4IDAgMjBweDtcbn1cblxuLyogYWxpZ25tZW50IG9mIGljb25zICovXG4udG9vbGJhci1zcGFjZXIge1xuICBmbGV4OiAxIDEgYXV0bztcbn1cbi5jb250ZW50IHtcbiAgcGFkZGluZzogMTBweDtcbn1cblxuLmNhbmNsaWNrIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLm5vLXYtc2Nyb2xsIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBvdmVyZmxvdy15OiBoaWRkZW47IFxuICBkaXNwbGF5OiBmbGV4OyBcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn0iXX0= */"
+module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url('background2.png');\n  background-size: cover;\n  /* background-image: linear-gradient(to right bottom, rgba(75, 204, 255), rgb(39, 39, 189)); */\n}\n\n.sidenav {\n  width: 300px;\n  border-right: 0;\n  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);\n  background-color: rgba(255, 255, 255, .89);\n}\n\n/*Toolbar drop shadow*/\n\n.matToolbar {\n  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.24);\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.toolbar-icon {\n  padding: 0 5px 0 20px;\n}\n\n/* alignment of icons */\n\n.toolbar-spacer {\n  flex: 1 1 auto;\n}\n\n.content {\n  padding: 10px;\n}\n\n.canclick {\n  cursor: pointer;\n}\n\n.no-v-scroll {\n  height: 100%;\n  overflow-y: hidden; \n  display: flex; \n  flex-direction: column;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osd0NBQXdEO0VBQ3hELHNCQUFzQjtFQUN0Qiw4RkFBOEY7QUFDaEc7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZUFBZTtFQUNmLHlDQUF5QztFQUN6QywwQ0FBMEM7QUFDNUM7O0FBRUEsc0JBQXNCOztBQUN0QjtFQUNFLDJDQUEyQztBQUM3Qzs7QUFFQTtFQUNFLHdCQUFnQjtFQUFoQixnQkFBZ0I7RUFDaEIsTUFBTTtFQUNOLFVBQVU7QUFDWjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQSx1QkFBdUI7O0FBQ3ZCO0VBQ0UsY0FBYztBQUNoQjs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBQ0E7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixzQkFBc0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvbWFpbi1uYXYvbWFpbi1uYXYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zaWRlbmF2LWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vLi4vYXNzZXRzL2JhY2tncm91bmQyLnBuZ1wiKTtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgLyogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0IGJvdHRvbSwgcmdiYSg3NSwgMjA0LCAyNTUpLCByZ2IoMzksIDM5LCAxODkpKTsgKi9cbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMzAwcHg7XG4gIGJvcmRlci1yaWdodDogMDtcbiAgYm94LXNoYWRvdzogM3B4IDAgNnB4IHJnYmEoMCwgMCwgMCwgMC4yNCk7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgLjg5KTtcbn1cblxuLypUb29sYmFyIGRyb3Agc2hhZG93Ki9cbi5tYXRUb29sYmFyIHtcbiAgYm94LXNoYWRvdzogMHB4IDVweCA2cHggcmdiYSgwLCAwLCAwLCAwLjI0KTtcbn1cblxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xufVxuXG4udG9vbGJhci1pY29uIHtcbiAgcGFkZGluZzogMCA1cHggMCAyMHB4O1xufVxuXG4vKiBhbGlnbm1lbnQgb2YgaWNvbnMgKi9cbi50b29sYmFyLXNwYWNlciB7XG4gIGZsZXg6IDEgMSBhdXRvO1xufVxuLmNvbnRlbnQge1xuICBwYWRkaW5nOiAxMHB4O1xufVxuXG4uY2FuY2xpY2sge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4ubm8tdi1zY3JvbGwge1xuICBoZWlnaHQ6IDEwMCU7XG4gIG92ZXJmbG93LXk6IGhpZGRlbjsgXG4gIGRpc3BsYXk6IGZsZXg7IFxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -863,7 +866,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <div class=\"no-v-scroll\">\n      <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">Stations</mat-toolbar>\n      <div style=\"overflow-y: auto;\">\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n      </div>\n    </div>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n\n      <mat-icon (click)=\"changePage()\" class=\"toolbar-icon canclick\" aria-hidden=\"false\"\n        aria-label=\"Example delete icon\">format_align_center</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage()\">All Stations</p>\n\n      <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\" *ngIf=\"!(isHandset$ | async)\">access_time</mat-icon>\n      <h6 *ngIf=\"!(isHandset$ | async)\">{{dateTime}}</h6>\n\n    </mat-toolbar>\n    <div>\n      <div *ngIf=\"page\">\n        <app-all-stations></app-all-stations>\n      </div>\n      <div class=\"content\" *ngIf=\"!page\">\n        <ng-content></ng-content>\n        <!-- <app-station-status></app-station-status> -->\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <div class=\"no-v-scroll\">\n      <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">Stations</mat-toolbar>\n      <div style=\"overflow-y: auto;\">\n        <app-summary></app-summary>\n        <!-- <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                  <mat-panel-title>\n                      Stations\n                  </mat-panel-title>\n                  <mat-panel-description>   \n                  </mat-panel-description>\n              </mat-expansion-panel-header>\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n        </mat-expansion-panel> -->\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n      </div>\n    </div>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n\n      <mat-icon (click)=\"changePage()\" class=\"toolbar-icon canclick\" aria-hidden=\"false\"\n        aria-label=\"Example delete icon\">select_all</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage()\">All Stations</p>\n\n      <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\" *ngIf=\"!(isHandset$ | async)\">\n        access_time</mat-icon>\n      <h6 *ngIf=\"!(isHandset$ | async)\">{{dateTime}}</h6>\n\n    </mat-toolbar>\n    <div>\n      <div *ngIf=\"page\">\n        <app-station-status></app-station-status>\n      </div>\n      <div class=\"content\" *ngIf=\"!page\">\n        <ng-content></ng-content>\n        <!-- <app-station-status></app-station-status> -->\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
 
 /***/ }),
 
@@ -987,7 +990,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let st of stationList\">\r\n    <a mat-list-item (click)=\"changeStation(st.id,st.name,st.type)\">{{st.name}}</a>\r\n    <mat-divider></mat-divider>\r\n</div>"
+module.exports = "<div *ngFor=\"let st of stationList\">\r\n        <a mat-list-item (click)=\"changeStation(st.id,st.name,st.type)\">{{st.name}}</a>\r\n        <mat-divider></mat-divider>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1054,7 +1057,7 @@ var SidebarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let satation of StationList\">\n  <div class=\"separator\">\n    <div class=\"link\">\n        <app-toolbar-template (click)=\"changeStation(satation.id,satation.name,satation.type)\" id={{satation.id}} name = {{satation.name}}></app-toolbar-template>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\" *ngIf=\"!loading\">\n  <table id=\"station\">\n    <tr>\n      <th>No</th>\n      <th (click)=\"sort('name')\">Station Name</th>\n      <th (click)=\"sort('active')\">Status</th>\n      <th (click)=\"sort('time')\">Time </th>\n      <th *ngIf=\"!(isHandset$ | async)\">Last data log</th>\n      <th (click)=\"sort('type')\">Type</th>\n    </tr>\n    <tr *ngFor=\"let satation of StationList; let i = index\"\n      (click)=\"changeStation(satation.id,satation.name,satation.type)\">\n      <td>{{i+1}}</td>\n      <td>{{satation.name}}</td>\n      <td>\n        <mat-icon style=\"color:green\" *ngIf=\"satation.active==2\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Active\" matTooltipClass=\"example-tooltip-green\">\n          check_circle_outline</mat-icon>\n        <mat-icon style=\"color:rgb(231, 153, 8)\" *ngIf=\"satation.active==1\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Warning\" matTooltipClass=\"example-tooltip-orange\">warning\n        </mat-icon>\n        <mat-icon style=\"color:red\" *ngIf=\"satation.active==0\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Not working\" matTooltipClass=\"example-tooltip-red\">\n          highlight_off</mat-icon>\n      </td>\n      <td>{{satation.lastdate}}</td>\n      <td *ngIf=\"!(isHandset$ | async)\">{{satation.difDate}} Days {{satation.difHour}} hours {{satation.difMin}} minutes\n      </td>\n      <td *ngIf = \"satation.type == 1\">WS</td>\n      <td *ngIf = \"satation.type == 2 || satation.type == 3\">RG</td>\n    </tr>\n  </table>\n</div>\n<div *ngIf=\"loading\">\n  <div class=\"loading-indicator\">\n    <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\n  </div>\n</div>\n<!-- <td>{{satation.difDate}} D {{satation.difHour}} H  {{satation.difMin}} M</td> -->"
 
 /***/ }),
 
@@ -1065,7 +1068,7 @@ module.exports = "<div *ngFor=\"let satation of StationList\">\n  <div class=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".separator {\n  padding: 10px; }\n\n.link {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXRpb24tc3RhdHVzL0c6XFxXZWF0aGVyU3RhdGlvbkZyb250RW5kL3NyY1xcYXBwXFxjb21wb25lbnRcXHN0YXRpb24tc3RhdHVzXFxzdGF0aW9uLXN0YXR1cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQWEsRUFBQTs7QUFHakI7RUFDSSxlQUFlLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvc3RhdGlvbi1zdGF0dXMvc3RhdGlvbi1zdGF0dXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VwYXJhdG9yIHtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbn1cclxuXHJcbi5saW5re1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59Il19 */"
+module.exports = "#station {\n  font-family: sans-serif;\n  font-size: 17px;\n  text-decoration: none;\n  border-collapse: collapse;\n  width: 100%;\n  background-color: rgba(0, 29, 56, 0.05); }\n\n#station td, #station th {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.027);\n  padding: 8px; }\n\n#station tr:nth-child(even) {\n  background-color: rgba(0, 0, 0, 0.032); }\n\n#station tr:hover {\n  background-color: rgba(255, 255, 255, 0.2);\n  cursor: pointer; }\n\n#station th {\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  background-color: rgba(0, 0, 0, 0.2);\n  color: white; }\n\n::ng-deep.example-tooltip-red {\n  background: #b71c1c; }\n\n::ng-deep.example-tooltip-green {\n  background: green; }\n\n::ng-deep.example-tooltip-orange {\n  background: orange; }\n\n.container {\n  overflow: auto; }\n\n/* Absolute Center Spinner */\n\n.loading-indicator {\n  position: fixed;\n  z-index: 999;\n  height: 2em;\n  width: 2em;\n  overflow: show;\n  margin: auto;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0; }\n\n/* Transparent Overlay */\n\n.loading-indicator:before {\n  content: '';\n  display: block;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.3); }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXRpb24tc3RhdHVzL0c6XFxXZWF0aGVyU3RhdGlvbkZyb250RW5kL3NyY1xcYXBwXFxjb21wb25lbnRcXHN0YXRpb24tc3RhdHVzXFxzdGF0aW9uLXN0YXR1cy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUF1QjtFQUN2QixlQUFlO0VBQ2YscUJBQXFCO0VBQ3JCLHlCQUF5QjtFQUN6QixXQUFXO0VBQ1gsdUNBQXNDLEVBQUE7O0FBR3hDO0VBQ0UsNkNBQTZDO0VBQzdDLFlBQVksRUFBQTs7QUFHZDtFQUE0QixzQ0FBcUMsRUFBQTs7QUFFakU7RUFDRSwwQ0FBbUM7RUFDbkMsZUFBZSxFQUFBOztBQUdqQjtFQUNFLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsZ0JBQWdCO0VBQ2hCLG9DQUFvQztFQUNwQyxZQUFZLEVBQUE7O0FBRWQ7RUFDRSxtQkFBbUIsRUFBQTs7QUFHckI7RUFDRSxpQkFBaUIsRUFBQTs7QUFHbkI7RUFDRSxrQkFBa0IsRUFBQTs7QUFHcEI7RUFDRSxjQUFjLEVBQUE7O0FBR2hCLDRCQUFBOztBQUNGO0VBQ0UsZUFBZTtFQUNmLFlBQVk7RUFDWixXQUFXO0VBQ1gsVUFBVTtFQUNWLGNBQWM7RUFDZCxZQUFZO0VBQ1osTUFBTTtFQUNOLE9BQU87RUFDUCxTQUFTO0VBQ1QsUUFBUSxFQUFBOztBQUdWLHdCQUFBOztBQUNBO0VBQ0UsV0FBVztFQUNYLGNBQWM7RUFDZCxlQUFlO0VBQ2YsTUFBTTtFQUNOLE9BQU87RUFDUCxXQUFXO0VBQ1gsWUFBWTtFQUNaLG9DQUFpQyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L3N0YXRpb24tc3RhdHVzL3N0YXRpb24tc3RhdHVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3N0YXRpb24ge1xyXG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IDE3cHg7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKCRjb2xvcjogIzAwMWQzOCwgJGFscGhhOiAwLjA1KTtcclxuICB9XHJcbiAgXHJcbiAgI3N0YXRpb24gdGQsICNzdGF0aW9uIHRoIHtcclxuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMDI3KTtcclxuICAgIHBhZGRpbmc6IDhweDtcclxuICB9XHJcbiAgXHJcbiAgI3N0YXRpb24gdHI6bnRoLWNoaWxkKGV2ZW4pe2JhY2tncm91bmQtY29sb3I6cmdiYSgkY29sb3I6ICMwMDAwMDAsICRhbHBoYTogMC4wMzIpO31cclxuICBcclxuICAjc3RhdGlvbiB0cjpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOnJnYmEoJGNvbG9yOiB3aGl0ZSwgJGFscGhhOiAwLjIpO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIH1cclxuICBcclxuICAjc3RhdGlvbiB0aCB7XHJcbiAgICBwYWRkaW5nLXRvcDogMTJweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAxMnB4O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGNvbG9yOiBibGFjaywgJGFscGhhOiAwLjIpO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gIH1cclxuICA6Om5nLWRlZXAuZXhhbXBsZS10b29sdGlwLXJlZCB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjYjcxYzFjO1xyXG4gIH1cclxuICBcclxuICA6Om5nLWRlZXAuZXhhbXBsZS10b29sdGlwLWdyZWVuIHtcclxuICAgIGJhY2tncm91bmQ6IGdyZWVuO1xyXG4gIH1cclxuICBcclxuICA6Om5nLWRlZXAuZXhhbXBsZS10b29sdGlwLW9yYW5nZSB7XHJcbiAgICBiYWNrZ3JvdW5kOiBvcmFuZ2U7XHJcbiAgfVxyXG5cclxuICAuY29udGFpbmVyIHtcclxuICAgIG92ZXJmbG93OiBhdXRvO1xyXG4gIH1cclxuXHJcbiAgLyogQWJzb2x1dGUgQ2VudGVyIFNwaW5uZXIgKi9cclxuLmxvYWRpbmctaW5kaWNhdG9yIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgei1pbmRleDogOTk5O1xyXG4gIGhlaWdodDogMmVtO1xyXG4gIHdpZHRoOiAyZW07XHJcbiAgb3ZlcmZsb3c6IHNob3c7XHJcbiAgbWFyZ2luOiBhdXRvO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAwO1xyXG4gIGJvdHRvbTogMDtcclxuICByaWdodDogMDtcclxufVxyXG5cclxuLyogVHJhbnNwYXJlbnQgT3ZlcmxheSAqL1xyXG4ubG9hZGluZy1pbmRpY2F0b3I6YmVmb3JlIHtcclxuICBjb250ZW50OiAnJztcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDAsMC4zKTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1082,22 +1085,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+/* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../service/api.service */ "./src/app/service/api.service.ts");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-timezone/index.js");
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+
+
+
+
 
 
 
 var StationStatusComponent = /** @class */ (function () {
-    function StationStatusComponent(dataService) {
+    function StationStatusComponent(dataService, api, breakpointObserver) {
         this.dataService = dataService;
-        this.data = {
-            success: false
-        };
-        this.StationList = dataService.stationList;
+        this.api = api;
+        this.breakpointObserver = breakpointObserver;
+        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
+        this.loading = true;
+        this.key = 'name';
+        this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Handset)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (result) { return result.matches; }));
+        // this.StationList = dataService.stationList;
     }
     StationStatusComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.update();
+        this.refreshData = setInterval(function () {
+            // update station status here
+            _this.update();
+        }, 20000);
+    };
+    StationStatusComponent.prototype.update = function () {
+        var _this = this;
+        this.api.getLastDataLogFroAllStation().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (result) {
+            if (result.state = true) {
+                for (var i = 0; i < result.result.length; i++) {
+                    var now = moment_timezone__WEBPACK_IMPORTED_MODULE_6__().tz("Asia/Colombo");
+                    var end = moment_timezone__WEBPACK_IMPORTED_MODULE_6__(result.result[i].ldlog).tz("Asia/Colombo");
+                    var duration = moment__WEBPACK_IMPORTED_MODULE_5__["duration"](now.diff(end));
+                    // console.log(duration.asMinutes().toFixed(1));
+                    result.result[i].time = Number(duration.asMinutes().toFixed(1));
+                    result.result[i].lastdate = end.format("DD/MM/YYYY HH:mm");
+                    result.result[i].difDate = duration.days();
+                    result.result[i].difHour = duration.hours();
+                    result.result[i].difMin = duration.minutes();
+                    // console.log(this.time);
+                    if (Number(duration.asMinutes().toFixed(1)) < 20) {
+                        result.result[i].active = 2;
+                    }
+                    else if (Number(duration.asMinutes().toFixed(1)) < 120) {
+                        result.result[i].active = 1;
+                    }
+                    else {
+                        result.result[i].active = 0;
+                    }
+                    // result.result[i].time = "this";
+                    // console.log(result.result[i]);
+                }
+                _this.StationList = result.result;
+                _this.sort(_this.key);
+                _this.loading = false;
+                // console.log("end");
+            }
+            else {
+                // do nothig just wait for next time
+            }
+        });
     };
     StationStatusComponent.prototype.changeStation = function (id, name, type) {
         this.dataService.changStation(id, name, type);
         this.dataService.change(false);
+    };
+    StationStatusComponent.prototype.ngOnDestroy = function () {
+        clearInterval(this.refreshData);
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
+    };
+    StationStatusComponent.prototype.sort = function (key) {
+        this.key = key;
+        if (key == "name" || key == 'lastdate') {
+            this.StationList.sort(function (a, b) {
+                return a[key].localeCompare(b[key]);
+            });
+        }
+        else {
+            this.StationList.sort(function (a, b) {
+                if (a[key] > b[key]) {
+                    return 1;
+                }
+                else if (a[key] < b[key]) {
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            });
+        }
     };
     StationStatusComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1105,7 +1196,7 @@ var StationStatusComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./station-status.component.html */ "./src/app/component/station-status/station-status.component.html"),
             styles: [__webpack_require__(/*! ./station-status.component.scss */ "./src/app/component/station-status/station-status.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], _service_api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"], _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["BreakpointObserver"]])
     ], StationStatusComponent);
     return StationStatusComponent;
 }());
@@ -1121,7 +1212,7 @@ var StationStatusComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar class=\"toolbar\" [ngClass]=\"active?'toolbarActive':'toolbarDeactive'\">\n  <span>{{name}}</span>\n  <mat-progress-spinner *ngIf=\"!ready\" [diameter]=\"30\" mode=\"indeterminate\"></mat-progress-spinner>\n\n  <mat-icon style=\"color:green\" *ngIf=\"active&&ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">check_circle_outline</mat-icon>\n  <p style=\"color:green\" *ngIf=\"active&&ready\"> Active</p>\n\n  <mat-icon style=\"color:red\" *ngIf=\"!active&&ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">highlight_off</mat-icon>\n  <p style=\"color:red\" *ngIf=\"!active&&ready\"> Not Working</p>\n  <span class=\"example-spacer\"></span>\n  <mat-icon *ngIf=\"ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">access_time</mat-icon>\n  <p *ngIf=\"ready\"> {{this.time.lastTime}} {{this.time.lastdate}}</p>\n\n  <mat-icon *ngIf=\"ready\" class=\"example-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\">info</mat-icon>\n  <p *ngIf=\"ready\"> Last data log {{this.time.difDate}} Days {{this.time.difHour}} Hours {{this.time.difMin}} Minutes Ago</p>\n</mat-toolbar>"
+module.exports = ""
 
 /***/ }),
 
@@ -1149,104 +1240,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../service/api.service */ "./src/app/service/api.service.ts");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-timezone/index.js");
-/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-
-
-
-
 
 
 
 var ToolbarTemplateComponent = /** @class */ (function () {
     function ToolbarTemplateComponent(apiService) {
         this.apiService = apiService;
-        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
-        this.active = false;
-        this.ready = false;
-        this.time = {
-            lastTime: "",
-            lastdate: "",
-            difMin: 0,
-            difHour: 0,
-            difDate: 0,
-        };
-        this.toolbarModel = {
-            dateTime: "",
-            temperatureInternal: "00.000000",
-            pressure: "0.000000",
-            light: "0.000000",
-            humidity: "0.000000",
-            temperature: "24.730000",
-            windVelocity: "1.090000",
-            rainFall: "0.000000",
-            windDirection: "243.360000",
-            success: false
-        };
     }
     ToolbarTemplateComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.getdata();
-        this.refreshData = setInterval(function () {
-            _this.getdata();
-        }, 60000);
     };
-    ToolbarTemplateComponent.prototype.getdata = function () {
-        var _this = this;
-        this.apiService.getLastDataLog({ station: this.id, type: this.type }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (result) {
-            console.log(result);
-            if (result.success) {
-                _this.toolbarModel = result;
-                _this.evaluate(result.dateTime);
-                _this.ready = true;
-            }
-        });
-    };
-    ToolbarTemplateComponent.prototype.convert = function (value) {
-        return Number(value).toFixed(2);
-    };
-    ToolbarTemplateComponent.prototype.evaluate = function (endDate) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var now, end, duration;
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                now = moment_timezone__WEBPACK_IMPORTED_MODULE_4__().tz("Asia/Colombo");
-                end = moment_timezone__WEBPACK_IMPORTED_MODULE_4__(endDate).tz("Asia/Colombo");
-                duration = moment__WEBPACK_IMPORTED_MODULE_3__["duration"](now.diff(end));
-                // console.log(duration.asMinutes().toFixed(1));
-                this.time.lastTime = end.format("HH:mm");
-                this.time.lastdate = end.format("DD/MM/YYYY");
-                this.time.difDate = duration.days();
-                this.time.difHour = duration.hours();
-                this.time.difMin = duration.minutes();
-                // console.log(this.time);
-                if (Number(duration.asMinutes().toFixed(1)) < 20) {
-                    this.active = true;
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    ToolbarTemplateComponent.prototype.ngOnDestroy = function () {
-        clearInterval(this.refreshData);
-        this.ngUnsubscribe.next();
-        this.ngUnsubscribe.complete();
-    };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('id'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], ToolbarTemplateComponent.prototype, "id", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('name'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], ToolbarTemplateComponent.prototype, "name", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('type'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], ToolbarTemplateComponent.prototype, "type", void 0);
     ToolbarTemplateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-toolbar-template',
@@ -1256,6 +1258,62 @@ var ToolbarTemplateComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]])
     ], ToolbarTemplateComponent);
     return ToolbarTemplateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/component/summary/summary.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/component/summary/summary.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <mat-card class=\"card\">\n    <mat-card-header>\n        <div mat-card-avatar class=\"example-header-image\"></div>\n      <mat-card-title></mat-card-title>\n    </mat-card-header>\n    <mat-card-content>\n      <span style=\"color: green\">Total station working</span>\n      <p style=\"color: red\">Total station Not working</p>\n      <p>Total stations</p>\n    </mat-card-content>\n  </mat-card> -->"
+
+/***/ }),
+
+/***/ "./src/app/component/summary/summary.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/component/summary/summary.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n  max-width: 300px;\n  background-color: rgba(0, 0, 0, 0.05);\n  color: black; }\n\n.contentText {\n  font-size: 50px;\n  font-family: \"Lucida Sans\", \"Lucida Sans Regular\", \"Lucida Grande\", \"Lucida Sans Unicode\", Geneva, Verdana, sans-serif;\n  text-align: center; }\n\n.example-header-image {\n  background-size: cover; }\n\n.toolbar-icon {\n  padding: 0 5px 0 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N1bW1hcnkvRzpcXFdlYXRoZXJTdGF0aW9uRnJvbnRFbmQvc3JjXFxhcHBcXGNvbXBvbmVudFxcc3VtbWFyeVxcc3VtbWFyeS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFnQjtFQUNoQixxQ0FBb0M7RUFDcEMsWUFBWSxFQUFBOztBQUVkO0VBQ0UsZUFBZTtFQUNmLHNIQUFzSDtFQUN0SCxrQkFBa0IsRUFBQTs7QUFFcEI7RUFFRSxzQkFBc0IsRUFBQTs7QUFHeEI7RUFDRSxxQkFBcUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9zdW1tYXJ5L3N1bW1hcnkuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCB7XHJcbiAgICBtYXgtd2lkdGg6IDMwMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkY29sb3I6IGJsYWNrLCAkYWxwaGE6IDAuMDUpO1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gIH1cclxuICAuY29udGVudFRleHQge1xyXG4gICAgZm9udC1zaXplOiA1MHB4O1xyXG4gICAgZm9udC1mYW1pbHk6IFwiTHVjaWRhIFNhbnNcIiwgXCJMdWNpZGEgU2FucyBSZWd1bGFyXCIsIFwiTHVjaWRhIEdyYW5kZVwiLCBcIkx1Y2lkYSBTYW5zIFVuaWNvZGVcIiwgR2VuZXZhLCBWZXJkYW5hLCBzYW5zLXNlcmlmO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICAuZXhhbXBsZS1oZWFkZXItaW1hZ2Uge1xyXG4gICAgLy8gYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiXCIpO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICB9XHJcbiAgXHJcbiAgLnRvb2xiYXItaWNvbiB7XHJcbiAgICBwYWRkaW5nOiAwIDVweCAwIDIwcHg7XHJcbiAgfSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/component/summary/summary.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/component/summary/summary.component.ts ***!
+  \********************************************************/
+/*! exports provided: SummaryComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SummaryComponent", function() { return SummaryComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SummaryComponent = /** @class */ (function () {
+    function SummaryComponent() {
+    }
+    SummaryComponent.prototype.ngOnInit = function () {
+    };
+    SummaryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-summary',
+            template: __webpack_require__(/*! ./summary.component.html */ "./src/app/component/summary/summary.component.html"),
+            styles: [__webpack_require__(/*! ./summary.component.scss */ "./src/app/component/summary/summary.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SummaryComponent);
+    return SummaryComponent;
 }());
 
 
@@ -1458,7 +1516,7 @@ var HumidityComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"tableData\" >\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"temperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Temperature (&deg;C)</th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.temperature}} </td>\n    </ng-container>\n\n    <!-- Pressure Column -->\n    <ng-container matColumnDef=\"pressure\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.pressure}} </td>\n    </ng-container>\n\n    <!-- Humidity Column -->\n    <ng-container matColumnDef=\"humidity\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.humidity}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Rainfall\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.rainFall}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Speed\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.windVelocity}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Direction\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.windDirection}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.light}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.temperatureInternal}} </td>\n    </ng-container>\n\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>"
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"tableData\" >\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"temperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Temperature (&deg;C)</th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperature)}} </td>\n    </ng-container>\n\n    <!-- Pressure Column -->\n    <ng-container matColumnDef=\"pressure\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.pressure)}} </td>\n    </ng-container>\n\n    <!-- Humidity Column -->\n    <ng-container matColumnDef=\"humidity\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.humidity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Rainfall\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.rainFall)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Speed\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windVelocity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Direction\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windDirection)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.light)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperatureInternal)}} </td>\n    </ng-container>\n\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>"
 
 /***/ }),
 
@@ -1504,6 +1562,10 @@ var LastdataSetComponent = /** @class */ (function () {
         this.displayedColumns = ['time', 'temperature', 'pressure', 'humidity', 'Rainfall', 'Wind Speed', 'Wind Direction', 'Light', 'internalTemperature'];
     }
     LastdataSetComponent.prototype.ngOnInit = function () {
+    };
+    //dataSource = this.tableData;
+    LastdataSetComponent.prototype.tonumber = function (value) {
+        return Number(value).toFixed(2);
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('data'),
@@ -1760,7 +1822,7 @@ var WaterLevelLastDataComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!loadingFlag\">\n    <div>\n        <h1 class=\"headdign\">{{stationDispayName}}</h1>\n    </div>\n    <div *ngIf=\"workingFlag\">\n        <div *ngIf=\"type == 1\">\n            <div>\n                <div class=\"inline\" *ngFor=\"let card of cards\">\n                    <app-cardtemplate [card]='card'></app-cardtemplate>\n                </div>\n            </div>\n            <div>\n                <h2 class=\"headdign\">Last two hours</h2>\n                <app-lastdata-set [data]='tableData'></app-lastdata-set>\n            </div>\n        </div>\n        <div *ngIf=\"type == 2 || type == 3\">\n            <div>\n                <app-cardtemplate [card]='waterLevel'></app-cardtemplate>\n            </div>\n            <div>\n                <h2 class=\"headdign\">Last two hours</h2>\n                <app-water-level-last-data [data]='tableData'></app-water-level-last-data>\n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"!workingFlag\">\n        <h1 class=\"error\">\n            This Station is not working properly\n        </h1>\n    </div>\n</div>\n<div *ngIf=\"loadingFlag\">\n\n    <div class=\"loading-indicator\">\n        <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\n    </div>\n</div>"
+module.exports = "<div *ngIf=\"!loadingFlag\">\n    <div>\n        <h1 class=\"headdign\">{{stationDispayName}}</h1>\n    </div>\n    <div *ngIf=\"workingFlag\">\n        <div *ngIf=\"type == 1\">\n            <div>\n                <div class=\"inline\" *ngFor=\"let card of cards\">\n                    <app-cardtemplate [card]='card'></app-cardtemplate>\n                </div>\n            </div>\n            <div>\n                <h2 class=\"headdign\">Last two hours</h2>\n                <app-lastdata-set [data]='tableData'></app-lastdata-set>\n            </div>\n        </div>\n        <div *ngIf=\"type == 2 || type == 3\">\n            <div>\n                <app-cardtemplate [card]='waterLevel'></app-cardtemplate>\n            </div>\n            <div>\n                <h2 class=\"headdign\">Last two hours</h2>\n                <app-water-level-last-data [data]='tableData'></app-water-level-last-data>\n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"!workingFlag\">\n        <h1 class=\"error\">\n            This Station is not working properly\n        </h1>\n    </div>\n</div>\n<div *ngIf=\"loadingFlag\">\n    <div class=\"loading-indicator\">\n        <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -2080,7 +2142,8 @@ var MaterialModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDividerModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatProgressSpinnerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTooltipModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTooltipModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatExpansionModule"]
             ],
             exports: [
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
@@ -2096,7 +2159,8 @@ var MaterialModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTableModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDividerModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatProgressSpinnerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTooltipModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatTooltipModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatExpansionModule"]
             ],
         })
     ], MaterialModule);
@@ -2140,6 +2204,12 @@ var ApiService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_2__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post(hostAddress + '/frontEnd/lastDataLog', data, { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
+    };
+    ApiService.prototype.getLastDataLogFroAllStation = function () {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_2__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(hostAddress + '/frontEnd/getLstDtaLg', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
     };
     ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
