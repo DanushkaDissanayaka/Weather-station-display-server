@@ -1,5 +1,6 @@
 const Station = require('../models/station');
 const supsiServer = require('../SUPSIserver/SUPSIserverAPI');
+const connect = require('../database/connect')
 /**
  *  Update station at every 1 minutes
  */
@@ -22,6 +23,7 @@ module.exports.update = () => {
                             Station.updateOne({ id: station.id }, { ldlog: data.dateTime }, (err, result) => {
                                 if (err) {
                                     console.log(err);
+                                    connect();
                                 }
                                 else {
                                     console.log("OK : ", station.name);
