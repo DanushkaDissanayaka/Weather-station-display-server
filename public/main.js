@@ -1057,7 +1057,7 @@ var SidebarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" *ngIf=\"!loading\">\n  <table id=\"station\">\n    <tr>\n      <th>No</th>\n      <th (click)=\"sort('name')\">Station Name</th>\n      <th (click)=\"sort('active')\">Status</th>\n      <th (click)=\"sort('time')\">Time </th>\n      <th *ngIf=\"!(isHandset$ | async)\">Last data log</th>\n      <th (click)=\"sort('type')\">Type</th>\n    </tr>\n    <tr *ngFor=\"let satation of StationList; let i = index\"\n      (click)=\"changeStation(satation.id,satation.name,satation.type)\">\n      <td>{{i+1}}</td>\n      <td>{{satation.name}}</td>\n      <td>\n        <mat-icon style=\"color:green\" *ngIf=\"satation.active==2\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Active\" matTooltipClass=\"example-tooltip-green\">\n          check_circle_outline</mat-icon>\n        <mat-icon style=\"color:rgb(231, 153, 8)\" *ngIf=\"satation.active==1\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Warning\" matTooltipClass=\"example-tooltip-orange\">warning\n        </mat-icon>\n        <mat-icon style=\"color:red\" *ngIf=\"satation.active==0\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Not working\" matTooltipClass=\"example-tooltip-red\">\n          highlight_off</mat-icon>\n      </td>\n      <td>{{satation.lastdate}}</td>\n      <td *ngIf=\"!(isHandset$ | async)\">{{satation.difDate}} Days {{satation.difHour}} hours {{satation.difMin}} minutes\n      </td>\n      <td *ngIf = \"satation.type == 1\">WS</td>\n      <td *ngIf = \"satation.type == 2 || satation.type == 3\">RG</td>\n    </tr>\n  </table>\n</div>\n<div *ngIf=\"loading\">\n  <div class=\"loading-indicator\">\n    <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\n  </div>\n</div>\n<!-- <td>{{satation.difDate}} D {{satation.difHour}} H  {{satation.difMin}} M</td> -->"
+module.exports = "<div class=\"container\" *ngIf=\"!loading\">\n  <table id=\"station\">\n    <tr>\n      <th>No</th>\n      <th (click)=\"sort('name',true)\">Station Name</th>\n      <th (click)=\"sort('active',true)\">Status</th>\n      <th (click)=\"sort('time',true)\">Time </th>\n      <th *ngIf=\"!(isHandset$ | async)\">Last data log</th>\n      <th (click)=\"sort('type',true)\">Type</th>\n    </tr>\n    <tr *ngFor=\"let satation of StationList; let i = index\"\n      (click)=\"changeStation(satation.id,satation.name,satation.type)\">\n      <td>{{i+1}}</td>\n      <td>{{satation.name}}</td>\n      <td>\n        <mat-icon style=\"color:green\" *ngIf=\"satation.active==2\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Active\" matTooltipClass=\"example-tooltip-green\">\n          check_circle_outline</mat-icon>\n        <mat-icon style=\"color:rgb(231, 153, 8)\" *ngIf=\"satation.active==1\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Warning\" matTooltipClass=\"example-tooltip-orange\">warning\n        </mat-icon>\n        <mat-icon style=\"color:red\" *ngIf=\"satation.active==0\" class=\"example-icon\" aria-hidden=\"false\"\n          aria-label=\"Example heart icon\" matTooltip=\"Not working\" matTooltipClass=\"example-tooltip-red\">\n          highlight_off</mat-icon>\n      </td>\n      <td>{{satation.lastdate}}</td>\n      <td *ngIf=\"!(isHandset$ | async)\">{{satation.difDate}} Days {{satation.difHour}} hours {{satation.difMin}} minutes\n      </td>\n      <td *ngIf = \"satation.type == 1\">WS</td>\n      <td *ngIf = \"satation.type == 2 || satation.type == 3\">RG</td>\n    </tr>\n  </table>\n</div>\n<div *ngIf=\"loading\">\n  <div class=\"loading-indicator\">\n    <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\n  </div>\n</div>\n<!-- <td>{{satation.difDate}} D {{satation.difHour}} H  {{satation.difMin}} M</td> -->"
 
 /***/ }),
 
@@ -1110,7 +1110,8 @@ var StationStatusComponent = /** @class */ (function () {
         this.breakpointObserver = breakpointObserver;
         this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
         this.loading = true;
-        this.key = 'name';
+        this.key = 'time';
+        this.flip = 1;
         this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_4__["Breakpoints"].Handset)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (result) { return result.matches; }));
         // this.StationList = dataService.stationList;
@@ -1169,20 +1170,25 @@ var StationStatusComponent = /** @class */ (function () {
         this.ngUnsubscribe.next();
         this.ngUnsubscribe.complete();
     };
-    StationStatusComponent.prototype.sort = function (key) {
+    StationStatusComponent.prototype.sort = function (key, flip) {
+        var _this = this;
+        if (flip === void 0) { flip = false; }
         this.key = key;
+        if (flip) {
+            this.flip = this.flip * -1;
+        }
         if (key == "name" || key == 'lastdate') {
             this.StationList.sort(function (a, b) {
-                return a[key].localeCompare(b[key]);
+                return (a[key].localeCompare(b[key])) * _this.flip;
             });
         }
         else {
             this.StationList.sort(function (a, b) {
                 if (a[key] > b[key]) {
-                    return 1;
+                    return 1 * _this.flip;
                 }
                 else if (a[key] < b[key]) {
-                    return -1;
+                    return -1 * _this.flip;
                 }
                 else {
                     return 0;
