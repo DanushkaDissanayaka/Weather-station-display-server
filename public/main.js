@@ -1210,7 +1210,7 @@ var MapComponent = /** @class */ (function () {
                             break;
                         }
                     }
-                    _this.feture[index].setStyle(_this.raninig);
+                    // this.feture[index].setStyle(this.raninig);
                 });
             }
         };
