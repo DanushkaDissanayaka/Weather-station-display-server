@@ -436,6 +436,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_all_stations_row_row_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./component/all-stations/row/row.component */ "./src/app/component/all-stations/row/row.component.ts");
 /* harmony import */ var _component_weather_card_water_level_last_data_water_level_last_data_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./component/weather-card/water-level-last-data/water-level-last-data.component */ "./src/app/component/weather-card/water-level-last-data/water-level-last-data.component.ts");
 /* harmony import */ var _component_summary_summary_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./component/summary/summary.component */ "./src/app/component/summary/summary.component.ts");
+/* harmony import */ var _component_map_map_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./component/map/map.component */ "./src/app/component/map/map.component.ts");
+/* harmony import */ var _component_map_popup_popup_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./component/map/popup/popup.component */ "./src/app/component/map/popup/popup.component.ts");
+
+
 
 
 
@@ -491,6 +495,8 @@ var AppModule = /** @class */ (function () {
                 _component_all_stations_row_row_component__WEBPACK_IMPORTED_MODULE_26__["RowComponent"],
                 _component_weather_card_water_level_last_data_water_level_last_data_component__WEBPACK_IMPORTED_MODULE_27__["WaterLevelLastDataComponent"],
                 _component_summary_summary_component__WEBPACK_IMPORTED_MODULE_28__["SummaryComponent"],
+                _component_map_map_component__WEBPACK_IMPORTED_MODULE_29__["MapComponent"],
+                _component_map_popup_popup_component__WEBPACK_IMPORTED_MODULE_30__["PopupComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -569,7 +575,7 @@ var AllStationsComponent = /** @class */ (function () {
     };
     AllStationsComponent.prototype.changeStation = function (id, name, type) {
         this.data.changStation(id, name, type);
-        this.data.change(false);
+        this.data.change(2);
     };
     AllStationsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -866,7 +872,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n  background-image: url
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <div class=\"no-v-scroll\">\n      <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">Stations</mat-toolbar>\n      <div style=\"overflow-y: auto;\">\n        <app-summary></app-summary>\n        <!-- <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                  <mat-panel-title>\n                      Stations\n                  </mat-panel-title>\n                  <mat-panel-description>   \n                  </mat-panel-description>\n              </mat-expansion-panel-header>\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n        </mat-expansion-panel> -->\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n      </div>\n    </div>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n\n      <mat-icon (click)=\"changePage()\" class=\"toolbar-icon canclick\" aria-hidden=\"false\"\n        aria-label=\"Example delete icon\">select_all</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage()\">All Stations</p>\n\n      <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\" *ngIf=\"!(isHandset$ | async)\">\n        access_time</mat-icon>\n      <h6 *ngIf=\"!(isHandset$ | async)\">{{dateTime}}</h6>\n\n    </mat-toolbar>\n    <div>\n      <div *ngIf=\"page\">\n        <app-station-status></app-station-status>\n      </div>\n      <div class=\"content\" *ngIf=\"!page\">\n        <ng-content></ng-content>\n        <!-- <app-station-status></app-station-status> -->\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <div class=\"no-v-scroll\">\n      <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">Stations</mat-toolbar>\n      <div style=\"overflow-y: auto;\">\n        <app-summary></app-summary>\n        <!-- <mat-expansion-panel>\n              <mat-expansion-panel-header>\n                  <mat-panel-title>\n                      Stations\n                  </mat-panel-title>\n                  <mat-panel-description>   \n                  </mat-panel-description>\n              </mat-expansion-panel-header>\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n        </mat-expansion-panel> -->\n        <mat-nav-list>\n          <app-sidebar></app-sidebar>\n        </mat-nav-list>\n      </div>\n    </div>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\" class=\"matToolbar\" style=\"flex: 0 0 60px;\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Weather UOM</span>\n      <span class=\"toolbar-spacer\"></span>\n\n      <mat-icon (click)=\"changePage(1)\" class=\"toolbar-icon canclick\" aria-hidden=\"false\"\n        aria-label=\"Example delete icon\">select_all</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage(1)\">All Stations</p>\n\n      <mat-icon (click)=\"changePage(3)\" class=\"toolbar-icon canclick\" aria-hidden=\"false\"\n        aria-label=\"Example delete icon\">map</mat-icon>\n      <p class=\"canclick\" (click)=\"changePage(3)\">Map</p>\n<!-- \n      <mat-icon class=\"toolbar-icon\" aria-hidden=\"false\" aria-label=\"Example heart icon\" *ngIf=\"!(isHandset$ | async)\">\n        access_time</mat-icon>\n      <h6 *ngIf=\"!(isHandset$ | async)\">{{dateTime}}</h6> -->\n\n    </mat-toolbar>\n    <div>\n      <div *ngIf=\"page==1\">\n        <app-station-status></app-station-status>\n      </div>\n      <div *ngIf=\"page==3\">\n        <app-map></app-map>\n      </div>\n      <div class=\"content\" *ngIf=\"page == 2\">\n        <ng-content></ng-content>\n        <!-- <app-station-status></app-station-status> -->\n      </div>\n    </div>\n  </mat-sidenav-content>\n</mat-sidenav-container>"
 
 /***/ }),
 
@@ -892,16 +898,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var MainNavComponent = /** @class */ (function () {
     function MainNavComponent(breakpointObserver, data) {
-        var _this = this;
         this.breakpointObserver = breakpointObserver;
         this.data = data;
-        this.page = true;
+        this.page = 1;
         this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["Breakpoints"].Handset)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result.matches; }));
-        setInterval(function () {
-            var currentDate = new Date();
-            _this.dateTime = currentDate.toLocaleDateString() + " " + currentDate.toLocaleTimeString();
-        }, 1000);
+        /**
+         *
+         */
+        // setInterval(() => {
+        //   let currentDate = new Date();
+        //   this.dateTime = currentDate.toLocaleDateString() + " " + currentDate.toLocaleTimeString();
+        // }, 1000)
     }
     MainNavComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -909,8 +917,8 @@ var MainNavComponent = /** @class */ (function () {
             _this.page = status;
         });
     };
-    MainNavComponent.prototype.changePage = function () {
-        this.page = true;
+    MainNavComponent.prototype.changePage = function (page) {
+        this.page = page;
     };
     MainNavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -921,6 +929,395 @@ var MainNavComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"], _service_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]])
     ], MainNavComponent);
     return MainNavComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/component/map/map.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/component/map/map.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"map\" class=\"map\"></div>\n\n<div id=\"popup\" class=\"ol-popup\">\n  <a href=\"#\" id=\"popup-closer\" class=\"ol-popup-closer\"></a>\n  <div>\n    <app-popup [stationData]='stationData' [weaterData]='weaterData'></app-popup>\n  </div>\n  <div id=\"popup-content\"></div>\n</div>\n<!-- <p (click)=\"refreshmarker()\">Test</p> -->\n"
+
+/***/ }),
+
+/***/ "./src/app/component/map/map.component.scss":
+/*!**************************************************!*\
+  !*** ./src/app/component/map/map.component.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "@charset \"UTF-8\";\n.map {\n  height: 100%;\n  width: 100%;\n  margin: 10px; }\n.ol-popup {\n  position: absolute;\n  background-color: white;\n  -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));\n  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));\n  padding: 15px;\n  border-radius: 10px;\n  border: 1px solid #cccccc;\n  bottom: 12px;\n  left: -50px;\n  min-width: 280px; }\n.ol-popup:after, .ol-popup:before {\n  top: 100%;\n  border: solid transparent;\n  content: \" \";\n  height: 0;\n  width: 0;\n  position: absolute;\n  pointer-events: none; }\n.ol-popup:after {\n  border-top-color: white;\n  border-width: 10px;\n  left: 48px;\n  margin-left: -10px; }\n.ol-popup:before {\n  border-top-color: #cccccc;\n  border-width: 11px;\n  left: 48px;\n  margin-left: -11px; }\n.ol-popup-closer {\n  text-decoration: none;\n  position: absolute;\n  top: 2px;\n  right: 8px; }\n.ol-popup-closer:after {\n  content: \"✖\"; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21hcC9tYXAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudC9tYXAvRzpcXFdlYXRoZXJTdGF0aW9uRnJvbnRFbmQvc3JjXFxhcHBcXGNvbXBvbmVudFxcbWFwXFxtYXAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDQWhCO0VBQ0ksWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZLEVBQUE7QUFHZDtFQUNFLGtCQUFrQjtFQUNsQix1QkFBdUI7RUFDdkIseURBQXNEO0VBQ3RELGlEQUE4QztFQUM5QyxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixZQUFZO0VBQ1osV0FBVztFQUNYLGdCQUFnQixFQUFBO0FBRWxCO0VBQ0UsU0FBUztFQUNULHlCQUF5QjtFQUN6QixZQUFZO0VBQ1osU0FBUztFQUNULFFBQVE7RUFDUixrQkFBa0I7RUFDbEIsb0JBQW9CLEVBQUE7QUFFdEI7RUFDRSx1QkFBdUI7RUFDdkIsa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixrQkFBa0IsRUFBQTtBQUVwQjtFQUNFLHlCQUF5QjtFQUN6QixrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLGtCQUFrQixFQUFBO0FBRXBCO0VBQ0UscUJBQXFCO0VBQ3JCLGtCQUFrQjtFQUNsQixRQUFRO0VBQ1IsVUFBVSxFQUFBO0FBRVo7RUFDRSxZQUFTLEVBQUkiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvbWFwL21hcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi5tYXAge1xuICBoZWlnaHQ6IDEwMCU7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW46IDEwcHg7IH1cblxuLm9sLXBvcHVwIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgLXdlYmtpdC1maWx0ZXI6IGRyb3Atc2hhZG93KDAgMXB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMikpO1xuICBmaWx0ZXI6IGRyb3Atc2hhZG93KDAgMXB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMikpO1xuICBwYWRkaW5nOiAxNXB4O1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjY2NjO1xuICBib3R0b206IDEycHg7XG4gIGxlZnQ6IC01MHB4O1xuICBtaW4td2lkdGg6IDI4MHB4OyB9XG5cbi5vbC1wb3B1cDphZnRlciwgLm9sLXBvcHVwOmJlZm9yZSB7XG4gIHRvcDogMTAwJTtcbiAgYm9yZGVyOiBzb2xpZCB0cmFuc3BhcmVudDtcbiAgY29udGVudDogXCIgXCI7XG4gIGhlaWdodDogMDtcbiAgd2lkdGg6IDA7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7IH1cblxuLm9sLXBvcHVwOmFmdGVyIHtcbiAgYm9yZGVyLXRvcC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlci13aWR0aDogMTBweDtcbiAgbGVmdDogNDhweDtcbiAgbWFyZ2luLWxlZnQ6IC0xMHB4OyB9XG5cbi5vbC1wb3B1cDpiZWZvcmUge1xuICBib3JkZXItdG9wLWNvbG9yOiAjY2NjY2NjO1xuICBib3JkZXItd2lkdGg6IDExcHg7XG4gIGxlZnQ6IDQ4cHg7XG4gIG1hcmdpbi1sZWZ0OiAtMTFweDsgfVxuXG4ub2wtcG9wdXAtY2xvc2VyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMnB4O1xuICByaWdodDogOHB4OyB9XG5cbi5vbC1wb3B1cC1jbG9zZXI6YWZ0ZXIge1xuICBjb250ZW50OiBcIuKcllwiOyB9XG4iLCIubWFwIHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gIH1cclxuXHJcbiAgLm9sLXBvcHVwIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgLXdlYmtpdC1maWx0ZXI6IGRyb3Atc2hhZG93KDAgMXB4IDRweCByZ2JhKDAsMCwwLDAuMikpO1xyXG4gICAgZmlsdGVyOiBkcm9wLXNoYWRvdygwIDFweCA0cHggcmdiYSgwLDAsMCwwLjIpKTtcclxuICAgIHBhZGRpbmc6IDE1cHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2NjY2NjYztcclxuICAgIGJvdHRvbTogMTJweDtcclxuICAgIGxlZnQ6IC01MHB4O1xyXG4gICAgbWluLXdpZHRoOiAyODBweDtcclxuICB9XHJcbiAgLm9sLXBvcHVwOmFmdGVyLCAub2wtcG9wdXA6YmVmb3JlIHtcclxuICAgIHRvcDogMTAwJTtcclxuICAgIGJvcmRlcjogc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgICBjb250ZW50OiBcIiBcIjtcclxuICAgIGhlaWdodDogMDtcclxuICAgIHdpZHRoOiAwO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgcG9pbnRlci1ldmVudHM6IG5vbmU7XHJcbiAgfVxyXG4gIC5vbC1wb3B1cDphZnRlciB7XHJcbiAgICBib3JkZXItdG9wLWNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlci13aWR0aDogMTBweDtcclxuICAgIGxlZnQ6IDQ4cHg7XHJcbiAgICBtYXJnaW4tbGVmdDogLTEwcHg7XHJcbiAgfVxyXG4gIC5vbC1wb3B1cDpiZWZvcmUge1xyXG4gICAgYm9yZGVyLXRvcC1jb2xvcjogI2NjY2NjYztcclxuICAgIGJvcmRlci13aWR0aDogMTFweDtcclxuICAgIGxlZnQ6IDQ4cHg7XHJcbiAgICBtYXJnaW4tbGVmdDogLTExcHg7XHJcbiAgfVxyXG4gIC5vbC1wb3B1cC1jbG9zZXIge1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAycHg7XHJcbiAgICByaWdodDogOHB4O1xyXG4gIH1cclxuICAub2wtcG9wdXAtY2xvc2VyOmFmdGVyIHtcclxuICAgIGNvbnRlbnQ6IFwi4pyWXCI7XHJcbiAgfSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/component/map/map.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/component/map/map.component.ts ***!
+  \************************************************/
+/*! exports provided: MapComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapComponent", function() { return MapComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service/api.service */ "./src/app/service/api.service.ts");
+/* harmony import */ var ol_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ol/Map */ "./node_modules/ol/Map.js");
+/* harmony import */ var ol_source_OSM__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ol/source/OSM */ "./node_modules/ol/source/OSM.js");
+/* harmony import */ var ol_View__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ol/View */ "./node_modules/ol/View.js");
+/* harmony import */ var ol_proj_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ol/proj.js */ "./node_modules/ol/proj.js");
+/* harmony import */ var ol_layer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ol/layer */ "./node_modules/ol/layer.js");
+/* harmony import */ var ol_source_Vector__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ol/source/Vector */ "./node_modules/ol/source/Vector.js");
+/* harmony import */ var ol_style__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/style */ "./node_modules/ol/style.js");
+/* harmony import */ var ol_Feature__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ol/Feature */ "./node_modules/ol/Feature.js");
+/* harmony import */ var ol_geom_Point__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ol/geom/Point */ "./node_modules/ol/geom/Point.js");
+/* harmony import */ var ol_Overlay__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ol/Overlay */ "./node_modules/ol/Overlay.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../service/data.service */ "./src/app/service/data.service.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-timezone/index.js");
+/* harmony import */ var moment_timezone__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(moment_timezone__WEBPACK_IMPORTED_MODULE_17__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ */
+
+
+
+
+
+var MapComponent = /** @class */ (function () {
+    /**
+     *
+     */
+    function MapComponent(api, data) {
+        var _this = this;
+        this.api = api;
+        this.data = data;
+        /**
+         *
+         */
+        this.feture = [];
+        this.locations = [[80.364926, 7.487025], [79.902028, 6.797230], [80.322938, 7.644338, 90]];
+        this.raninig = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
+            image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
+                color: [14, 14, 180],
+                crossOrigin: 'center',
+                src: '../../assets/marker.png',
+                scale: 0.12,
+                anchor: [0.5, 1]
+            }))
+        });
+        /**
+         *
+         */
+        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_14__["Subject"]();
+        this.getdata = function (id, type, callback) {
+            var data;
+            _this.api.getThisTimeData({ station: id, type: type }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(_this.ngUnsubscribe)).subscribe(function (data) {
+                // console.log(data);
+                callback(data);
+            });
+        };
+    }
+    MapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.api.getLocationForAllStation().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_13__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (result) {
+            _this.initilizeMap(result.result);
+        });
+        this.refreshmarker();
+        setInterval(function () {
+            console.log("Update");
+            _this.refreshmarker();
+        }, 60000);
+        // this.map2();
+    };
+    MapComponent.prototype.initilizeMap = function (location) {
+        var _this = this;
+        console.log(location.length);
+        var style = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
+            image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
+                color: [14, 180, 14],
+                crossOrigin: 'center',
+                src: '../../assets/marker.png',
+                scale: 0.12,
+                anchor: [0.5, 1]
+            }))
+        });
+        var deactive = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
+            image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
+                color: [180, 14, 14],
+                crossOrigin: 'center',
+                src: '../../assets/marker.png',
+                scale: 0.12,
+                anchor: [0.5, 1]
+            }))
+        });
+        /**
+         *
+         */
+        var container = document.getElementById('popup');
+        var content = document.getElementById('popup-content');
+        var closer = document.getElementById('popup-closer');
+        /**
+         *
+         */
+        /**
+         *
+         */
+        var marker;
+        // for (let index = 0; index < this.locations.length; index++) {
+        //   marker = new Feature({
+        //     geometry: new Point(fromLonLat(this.locations[index])),
+        //     name: 'Null Island',
+        //     id: index
+        //   });
+        //   marker.setStyle(style);
+        //   feture.push(marker)
+        // }
+        for (var index = 0; index < location.length; index++) {
+            if (location[index].location.length > 0) {
+                // console.log(location[index].location);
+                // console.log(location[index].ldlog);
+                /***
+                 *
+                 * Time verification
+                 */
+                var now = moment_timezone__WEBPACK_IMPORTED_MODULE_17__().tz("Asia/Colombo");
+                var end = moment_timezone__WEBPACK_IMPORTED_MODULE_17__(location[index].ldlog).tz("Asia/Colombo");
+                var duration = moment__WEBPACK_IMPORTED_MODULE_16__["duration"](now.diff(end));
+                // console.log(duration.asMinutes().toFixed(1));
+                var time = Number(duration.asMinutes().toFixed(1));
+                // console.log(time);
+                /**
+                 *
+                 */
+                if (time < 121) {
+                    marker = new ol_Feature__WEBPACK_IMPORTED_MODULE_10__["default"]({
+                        geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_11__["default"](Object(ol_proj_js__WEBPACK_IMPORTED_MODULE_6__["fromLonLat"])(location[index].location)),
+                        name: location[index].name,
+                        id: location[index].id,
+                        type: location[index].type,
+                        active: true
+                    });
+                    marker.setStyle(style);
+                }
+                else {
+                    marker = new ol_Feature__WEBPACK_IMPORTED_MODULE_10__["default"]({
+                        geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_11__["default"](Object(ol_proj_js__WEBPACK_IMPORTED_MODULE_6__["fromLonLat"])(location[index].location)),
+                        name: location[index].name,
+                        id: location[index].id,
+                        type: location[index].type,
+                        active: false
+                    });
+                    marker.setStyle(deactive);
+                }
+                this.feture.push(marker);
+            }
+        }
+        var overlay = new ol_Overlay__WEBPACK_IMPORTED_MODULE_12__["default"]({
+            element: container,
+            autoPan: true,
+            autoPanAnimation: {
+                duration: 250
+            }
+        });
+        this.marker = new ol_Feature__WEBPACK_IMPORTED_MODULE_10__["default"]({
+            geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_11__["default"](Object(ol_proj_js__WEBPACK_IMPORTED_MODULE_6__["fromLonLat"])([80.364926, 7.487025]))
+        });
+        this.vectorSource = new ol_source_Vector__WEBPACK_IMPORTED_MODULE_8__["default"]({
+            features: this.feture
+        });
+        this.vectorLayer = new ol_layer__WEBPACK_IMPORTED_MODULE_7__["Vector"]({
+            source: this.vectorSource
+        });
+        this.rasterLayer = new ol_layer__WEBPACK_IMPORTED_MODULE_7__["Tile"]({
+            source: new ol_source_OSM__WEBPACK_IMPORTED_MODULE_4__["default"]()
+        });
+        var map = new ol_Map__WEBPACK_IMPORTED_MODULE_3__["default"]({
+            target: 'map',
+            layers: [
+                this.rasterLayer,
+                this.vectorLayer,
+            ],
+            overlays: [overlay],
+            view: new ol_View__WEBPACK_IMPORTED_MODULE_5__["default"]({
+                center: Object(ol_proj_js__WEBPACK_IMPORTED_MODULE_6__["fromLonLat"])([80.464926, 7.387025]),
+                zoom: 9.5
+            })
+        });
+        closer.onclick = function () {
+            _this.weaterData = undefined; //##################
+            overlay.setPosition(undefined);
+            closer.blur();
+            return false;
+        };
+        map.on('click', function (evt) {
+            var coordinate = evt.coordinate;
+            _this.weaterData = undefined; //##################
+            var feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+                return feature;
+            });
+            // console.log(feature);
+            if (feature) {
+                _this.stationData = { name: feature.get('name'), id: feature.get('id'), type: feature.get('type') };
+                _this.getdata(feature.get('id'), feature.get('type'), function (data) {
+                    _this.weaterData = data;
+                });
+                overlay.setPosition(coordinate);
+            }
+            else {
+                _this.weaterData = undefined; //##################
+                overlay.setPosition(undefined);
+                closer.blur();
+                return false;
+            }
+        });
+    };
+    MapComponent.prototype.refreshmarker = function () {
+        var _this = this;
+        var _loop_1 = function (index) {
+            if (this_1.feture[index].get('type') == "1" && this_1.feture[index].get('active')) {
+                /**
+                 * analize data for rain
+                 */
+                this_1.getdata(this_1.feture[index].get('id'), this_1.feture[index].get('type'), function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        if (Number(data[i].rainFall) != 0) {
+                            _this.feture[index].setStyle(_this.raninig);
+                            break;
+                        }
+                    }
+                    _this.feture[index].setStyle(_this.raninig);
+                });
+            }
+        };
+        var this_1 = this;
+        for (var index = 0; index < this.feture.length; index++) {
+            _loop_1(index);
+        }
+        // console.log("done");
+    };
+    MapComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-map',
+            template: __webpack_require__(/*! ./map.component.html */ "./src/app/component/map/map.component.html"),
+            styles: [__webpack_require__(/*! ./map.component.scss */ "./src/app/component/map/map.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _service_data_service__WEBPACK_IMPORTED_MODULE_15__["DataService"]])
+    ], MapComponent);
+    return MapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/component/map/popup/popup.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/component/map/popup/popup.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"stationData\">\n    <span class=\"text\">{{stationData.name}}</span>\n    <div *ngIf=\"weaterData\">\n        <div *ngIf=\"weaterData[0].success\">\n            <div *ngIf='stationData.type == 1'>\n                <img src=\"../../../../assets/weatherInfoImg/Temperature-icon.png\" alt=\"\" class=\"avatar\">\n                <p>Temprature : {{toNumber(weaterData[0].temperature)}}</p>\n                <p>Rainfall : {{toNumber(weaterData[0].rainFall)}} <span (click)=\"changeStation(stationData.id,stationData.name,stationData.type)\" style=\"color: blue; float: right; display: inline-block;\" class=\"canclick\"> <u>more..</u></span></p>\n            </div>\n            <div *ngIf='stationData.type == 2 || stationData.type == 3'>\n                <img src=\"../../../../assets/weatherInfoImg/waterlevel.png\" alt=\"\" class=\"avatar\">\n                <p>Water Level : {{toNumber(weaterData[0].waterLevel)}} <span (click)=\"changeStation(stationData.id,stationData.name,stationData.type)\" style=\"color: blue; float: right; display: inline-block;\" class=\"canclick\"> <u>more..</u></span></p>\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/component/map/popup/popup.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/app/component/map/popup/popup.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".avatar {\n  vertical-align: middle;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  display: inline-block;\n  float: left; }\n\n.text {\n  text-align: center; }\n\n.canclick {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L21hcC9wb3B1cC9HOlxcV2VhdGhlclN0YXRpb25Gcm9udEVuZC9zcmNcXGFwcFxcY29tcG9uZW50XFxtYXBcXHBvcHVwXFxwb3B1cC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNCQUFzQjtFQUN0QixXQUFXO0VBQ1gsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixxQkFBcUI7RUFDckIsV0FBVyxFQUFBOztBQUVmO0VBQ0ksa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksZUFBZSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L21hcC9wb3B1cC9wb3B1cC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hdmF0YXIge1xyXG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcclxuICAgIHdpZHRoOiA1MHB4O1xyXG4gICAgaGVpZ2h0OiA1MHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuLnRleHQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uY2FuY2xpY2sge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIH0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/component/map/popup/popup.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/component/map/popup/popup.component.ts ***!
+  \********************************************************/
+/*! exports provided: PopupComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PopupComponent", function() { return PopupComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../service/data.service */ "./src/app/service/data.service.ts");
+/* harmony import */ var _service_api_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../service/api.service */ "./src/app/service/api.service.ts");
+
+
+
+
+
+
+var PopupComponent = /** @class */ (function () {
+    function PopupComponent(api, data) {
+        var _this = this;
+        this.api = api;
+        this.data = data;
+        this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.getdata = function (id, type, callback) {
+            var data;
+            _this.api.getThisTimeData({ station: id, type: type }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(_this.ngUnsubscribe)).subscribe(function (data) {
+                callback(data);
+            });
+        };
+    }
+    PopupComponent.prototype.ngOnInit = function () {
+    };
+    PopupComponent.prototype.toNumber = function (value) {
+        return Number(value).toFixed(2);
+    };
+    PopupComponent.prototype.changeStation = function (id, name, type) {
+        this.data.changStation(id, name, type);
+        this.data.change(2);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('stationData'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], PopupComponent.prototype, "stationData", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('weaterData'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], PopupComponent.prototype, "weaterData", void 0);
+    PopupComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-popup',
+            template: __webpack_require__(/*! ./popup.component.html */ "./src/app/component/map/popup/popup.component.html"),
+            styles: [__webpack_require__(/*! ./popup.component.scss */ "./src/app/component/map/popup/popup.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_api_service__WEBPACK_IMPORTED_MODULE_5__["ApiService"], _service_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"]])
+    ], PopupComponent);
+    return PopupComponent;
 }());
 
 
@@ -1030,7 +1427,7 @@ var SidebarComponent = /** @class */ (function () {
     };
     SidebarComponent.prototype.changeStation = function (id, name, type) {
         this.data.changStation(id, name, type);
-        this.data.change(false);
+        this.data.change(2);
     };
     SidebarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1163,7 +1560,7 @@ var StationStatusComponent = /** @class */ (function () {
     };
     StationStatusComponent.prototype.changeStation = function (id, name, type) {
         this.dataService.changStation(id, name, type);
-        this.dataService.change(false);
+        this.dataService.change(2);
     };
     StationStatusComponent.prototype.ngOnDestroy = function () {
         clearInterval(this.refreshData);
@@ -1522,7 +1919,7 @@ var HumidityComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"tableData\" >\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"temperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Temperature (&deg;C)</th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperature)}} </td>\n    </ng-container>\n\n    <!-- Pressure Column -->\n    <ng-container matColumnDef=\"pressure\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.pressure)}} </td>\n    </ng-container>\n\n    <!-- Humidity Column -->\n    <ng-container matColumnDef=\"humidity\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.humidity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Rainfall\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.rainFall)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Speed\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windVelocity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Direction\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windDirection)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.light)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperatureInternal)}} </td>\n    </ng-container>\n\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>"
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"tableData\" >\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"time\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Time </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.time}} </td>\n    </ng-container>\n    <!-- Temperature Column -->\n    <ng-container matColumnDef=\"temperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\" > Temp (&deg;C)</th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperature)}} </td>\n    </ng-container>\n\n    <!-- Pressure Column -->\n    <ng-container matColumnDef=\"pressure\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Pressure (kpa) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.pressure)}} </td>\n    </ng-container>\n\n    <!-- Humidity Column -->\n    <ng-container matColumnDef=\"humidity\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Humidity (%) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.humidity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Rainfall\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Rainfall (mm) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.rainFall)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Speed\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Speed (ms<sup>-1</sup>) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windVelocity)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Wind Direction\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Wind Direction (&deg;) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.windDirection)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"Light\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Light (lux) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.light)}} </td>\n    </ng-container>\n\n    <!-- Rainfall Column -->\n    <ng-container matColumnDef=\"internalTemperature\">\n      <th mat-header-cell *matHeaderCellDef class=\"hedder\"> Internal T (&deg;C) </th>\n      <td mat-cell *matCellDef=\"let element\"> {{tonumber(element.temperatureInternal)}} </td>\n    </ng-container>\n\n\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>"
 
 /***/ }),
 
@@ -2218,6 +2615,12 @@ var ApiService = /** @class */ (function () {
         return this.http.get(hostAddress + '/frontEnd/getLstDtaLg', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
     };
+    ApiService.prototype.getLocationForAllStation = function () {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_2__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get(hostAddress + '/frontEnd/location', { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.json(); }));
+    };
     ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -2297,7 +2700,7 @@ var DataService = /** @class */ (function () {
         this.currentStationName = this.stationName.asObservable();
         this.type = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](1);
         this.currentType = this.type.asObservable();
-        this.changePage = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this.changePage = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](1);
         this.currentPage = this.changePage.asObservable();
     }
     DataService.prototype.changStation = function (station, stationName, type) {
