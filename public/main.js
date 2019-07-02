@@ -1023,7 +1023,7 @@ var MapComponent = /** @class */ (function () {
         this.locations = [[80.364926, 7.487025], [79.902028, 6.797230], [80.322938, 7.644338, 90]];
         this.raninig = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
             image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
-                color: [14, 14, 180],
+                color: [14, 180, 180],
                 crossOrigin: 'center',
                 src: '../../assets/marker.png',
                 scale: 0.12,
@@ -1069,6 +1069,15 @@ var MapComponent = /** @class */ (function () {
         var deactive = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
             image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
                 color: [180, 14, 14],
+                crossOrigin: 'center',
+                src: '../../assets/marker.png',
+                scale: 0.12,
+                anchor: [0.5, 1]
+            }))
+        });
+        var river = new ol_style__WEBPACK_IMPORTED_MODULE_9__["Style"]({
+            image: new ol_style__WEBPACK_IMPORTED_MODULE_9__["Icon"](({
+                color: [180, 14, 180],
                 crossOrigin: 'center',
                 src: '../../assets/marker.png',
                 scale: 0.12,
@@ -1122,7 +1131,13 @@ var MapComponent = /** @class */ (function () {
                         type: location[index].type,
                         active: true
                     });
-                    marker.setStyle(style);
+                    // console.log(location[index].type);
+                    if (location[index].type == 1) {
+                        marker.setStyle(style);
+                    }
+                    else {
+                        marker.setStyle(river);
+                    }
                 }
                 else {
                     marker = new ol_Feature__WEBPACK_IMPORTED_MODULE_10__["default"]({
@@ -2592,7 +2607,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var hostAddress = "https://wsdispalyserver.herokuapp.com"; //"http://localhost:3000"//
+var hostAddress = "http://4onse.projects.uom.lk"; //"https://wsdispalyserver.herokuapp.com";//"http://localhost:3000"//
 var ApiService = /** @class */ (function () {
     function ApiService(http) {
         this.http = http;
